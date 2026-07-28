@@ -824,6 +824,13 @@ header.navbar {
 .contact-form button:hover {
   background-color: #1e40af;
 }
+
+.static-form-note {
+  color: #94a3b8;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .legal-section {
   background-color: #0f172a;
   color: #f1f5f9;
@@ -885,7 +892,7 @@ header.navbar {
 }
 
 .career-growth {
-  background: url("../images/internship-bg.jpg") no-repeat center center / cover;
+  background: url("../images/joinus.jpg") no-repeat center center / cover;
   color: #f1f5f9;
   padding: 80px 24px;
   position: relative;

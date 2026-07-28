@@ -1,9 +1,6 @@
-import os
-
-from flask import Flask, render_template, request, redirect, flash
+from flask import Flask, render_template
 
 app = Flask(__name__)
-app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key-change-me")
 
 @app.route("/")
 def home():
@@ -40,32 +37,6 @@ def careers():
 @app.route('/training')
 def training():
     return render_template('training.html')
-
-@app.route('/send', methods=['POST'])
-def send():
-    name = request.form['name']
-    email = request.form['email']
-    message = request.form['message']
-
-    # Handle however you like — store in DB, send email, etc.
-    print(f"Contact message from {name} ({email}): {message}")
-
-    flash('Thanks for reaching out! We\'ll get back to you shortly.')
-    return redirect('/contact')
-
-@app.route('/apply-internship', methods=['POST'])
-def apply_internship():
-    name = request.form['name']
-    email = request.form['email']
-    university = request.form['university']
-    field = request.form['field']
-    message = request.form['message']
-
-    # You can handle this however you like — store in DB, send email, etc.
-    print(f"Internship Application from {name} ({email})")
-
-    flash('Thank you for applying! We’ll get back to you soon.')
-    return redirect('/careers')
 
 if __name__ == "__main__":
     app.run(debug=True)

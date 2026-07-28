@@ -275,3 +275,34 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!ticking) { requestAnimationFrame(apply); ticking = true; }
   }, { passive: true });
 });
+
+// Static-site forms: prepare a professional email without requiring a server.
+document.addEventListener("DOMContentLoaded", () => {
+  const labels = {
+    name: "Name",
+    email: "Email",
+    university: "University / Institute",
+    field: "Field",
+    message: "Message"
+  };
+
+  document.querySelectorAll("[data-mail-form]").forEach(form => {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const lines = [];
+      form.querySelectorAll("[name]").forEach(field => {
+        const value = field.tagName === "SELECT"
+          ? field.selectedOptions[0]?.textContent.trim()
+          : field.value.trim();
+        if (value) lines.push(`${labels[field.name] || field.name}: ${value}`);
+      });
+
+      const recipient = form.dataset.mailTo;
+      const subject = form.dataset.mailSubject || "Website enquiry";
+      window.location.href =
+        `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n\n"))}`;
+    });
+  });
+});

@@ -17,14 +17,6 @@
 
   {% include "header.html" %}
 
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <div class="flash-toast">
-        {% for m in messages %}<div class="flash">{{ m }}</div>{% endfor %}
-      </div>
-    {% endif %}
-  {% endwith %}
-
   <main>
     {% block content %}{% endblock %}
   </main>

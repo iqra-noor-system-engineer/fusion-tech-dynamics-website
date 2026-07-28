@@ -1,0 +1,308 @@
+// Smooth scroll for same-page anchor links
+
+// Example JS for smooth scrolling and navbar behavior
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("nav a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", function(e) {
+      const targetId = this.getAttribute("href");
+      if (targetId.startsWith("#")) {
+        e.preventDefault();
+        document.querySelector(targetId).scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a[href^='#']");
+
+  links.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+});
+
+// In static/js/script.js
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll('.fade-on-scroll');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+// Hero: rotating headline word + live "Systems Monitor" widget
+document.addEventListener("DOMContentLoaded", () => {
+  // --- rotating word ---
+  const rotator = document.getElementById("rotator");
+  if (rotator) {
+    const words = [
+      "Every System", "Aerospace", "Embedded Systems",
+      "Robotics", "Industrial Automation", "Intelligent Software"
+    ];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % words.length;
+      rotator.style.opacity = "0";
+      setTimeout(() => {
+        rotator.textContent = words[i];
+        rotator.style.opacity = "1";
+      }, 350);
+    }, 2600);
+  }
+
+  // --- live systems-monitor widget ---
+  const clock = document.getElementById("sysmon-clock");
+  if (clock) {
+    const dateEl = document.getElementById("sysmon-date");
+    const latEl  = document.getElementById("sysmon-lat");
+    const altEl  = document.getElementById("sysmon-alt");
+    const line   = document.getElementById("sysmon-line");
+    const months = ["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"];
+    const pad = n => String(n).padStart(2, "0");
+    const data = Array.from({ length: 44 }, () => 28 + Math.random() * 22);
+
+    const points = arr => arr.map((v, idx) => {
+      const x = (idx / (arr.length - 1)) * 300;
+      const y = 60 - (v / 60) * 60;
+      return x.toFixed(1) + "," + y.toFixed(1);
+    }).join(" ");
+
+    function tick() {
+      const d = new Date();
+      clock.textContent = pad(d.getHours()) + ":" + pad(d.getMinutes()) + ":" + pad(d.getSeconds());
+      if (dateEl) dateEl.textContent = pad(d.getDate()) + " " + months[d.getMonth()] + " " + d.getFullYear();
+      if (latEl) latEl.textContent = (18 + Math.floor(Math.random() * 9)) + " ms";
+      if (altEl) altEl.textContent = (1240 + Math.floor(Math.random() * 18)).toLocaleString() + " m";
+      data.push(28 + Math.random() * 22);
+      data.shift();
+      if (line) line.setAttribute("points", points(data));
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+});
+
+// Mobile navigation toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
+  if (!toggle || !menu) return;
+
+  const close = () => {
+    menu.classList.remove("open");
+    toggle.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  };
+
+  toggle.addEventListener("click", () => {
+    const open = menu.classList.toggle("open");
+    toggle.classList.toggle("open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  menu.querySelectorAll("a").forEach(a => a.addEventListener("click", close));
+});
+
+// Count-up stats + site-wide scroll reveal
+document.addEventListener("DOMContentLoaded", () => {
+  // --- count-up stats ---
+  const statsBar = document.querySelector(".stats-bar");
+  if (statsBar) {
+    let done = false;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !done) {
+          done = true;
+          document.querySelectorAll(".stat strong").forEach(el => {
+            const raw = el.textContent.trim();
+            const target = parseInt(raw, 10) || 0;
+            const suffix = raw.replace(/[0-9]/g, "");
+            let cur = 0;
+            const inc = Math.max(1, target / 40);
+            const t = setInterval(() => {
+              cur += inc;
+              if (cur >= target) { cur = target; clearInterval(t); }
+              el.textContent = Math.round(cur) + suffix;
+            }, 28);
+          });
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    obs.observe(statsBar);
+  }
+
+  // --- scroll reveal (progressive enhancement: only hides once JS runs) ---
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const targets = document.querySelectorAll(
+      ".service-card, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card"
+    );
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add("reveal-in"); ro.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    targets.forEach((el, i) => {
+      el.classList.add("reveal");
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 70) + "ms";
+      ro.observe(el);
+    });
+  }
+});
+
+// Hero animated particle network (free, code-built "video" background)
+document.addEventListener("DOMContentLoaded", () => {
+  const canvas = document.querySelector(".hero-canvas");
+  if (!canvas) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const ctx = canvas.getContext("2d");
+  let w = 0, h = 0, dots = [];
+  const COUNT = 90, LINK = 150;
+
+  function resize() {
+    w = canvas.width = canvas.offsetWidth;
+    h = canvas.height = canvas.offsetHeight;
+  }
+  function seed() {
+    dots = [];
+    for (let i = 0; i < COUNT; i++) {
+      dots.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        vx: (Math.random() - 0.5) * 0.35,
+        vy: (Math.random() - 0.5) * 0.35,
+        r: Math.random() * 1.6 + 0.7
+      });
+    }
+  }
+  function frame() {
+    ctx.clearRect(0, 0, w, h);
+    for (let i = 0; i < dots.length; i++) {
+      const p = dots[i];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > w) p.vx *= -1;
+      if (p.y < 0 || p.y > h) p.vy *= -1;
+      for (let j = i + 1; j < dots.length; j++) {
+        const q = dots[j], dx = p.x - q.x, dy = p.y - q.y;
+        const d = Math.sqrt(dx * dx + dy * dy);
+        if (d < LINK) {
+          ctx.strokeStyle = "rgba(96,165,250," + (0.14 * (1 - d / LINK)).toFixed(3) + ")";
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.stroke();
+        }
+      }
+    }
+    ctx.shadowBlur = 6;
+    ctx.shadowColor = "#60a5fa";
+    ctx.fillStyle = "rgba(120,180,255,0.9)";
+    for (const p of dots) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.shadowBlur = 0;
+    requestAnimationFrame(frame);
+  }
+  resize();
+  seed();
+  frame();
+  let t;
+  window.addEventListener("resize", () => {
+    clearTimeout(t);
+    t = setTimeout(() => { resize(); seed(); }, 200);
+  });
+});
+
+// Scroll progress bar
+document.addEventListener("DOMContentLoaded", () => {
+  const bar = document.getElementById("scrollProgress");
+  if (!bar) return;
+  const update = () => {
+    const st = document.documentElement.scrollTop || document.body.scrollTop;
+    const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    bar.style.width = (h > 0 ? (st / h) * 100 : 0) + "%";
+  };
+  window.addEventListener("scroll", update, { passive: true });
+  update();
+});
+
+// Draw-in underlines under section headings (on scroll)
+document.addEventListener("DOMContentLoaded", () => {
+  const titles = document.querySelectorAll(".section-title, .section-heading");
+  if (!titles.length) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("underline-in"); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.5 });
+  titles.forEach(t => obs.observe(t));
+});
+
+// Gentle parallax on the hero network background
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const canvas = document.querySelector(".hero-canvas");
+  if (!canvas) return;
+  let ticking = false;
+  const apply = () => {
+    canvas.style.transform = "translateY(" + (window.scrollY * 0.3) + "px)";
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => {
+    if (!ticking) { requestAnimationFrame(apply); ticking = true; }
+  }, { passive: true });
+});
+
+// Static-site forms: prepare a professional email without requiring a server.
+document.addEventListener("DOMContentLoaded", () => {
+  const labels = {
+    name: "Name",
+    email: "Email",
+    university: "University / Institute",
+    field: "Field",
+    message: "Message"
+  };
+
+  document.querySelectorAll("[data-mail-form]").forEach(form => {
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+
+      const lines = [];
+      form.querySelectorAll("[name]").forEach(field => {
+        const value = field.tagName === "SELECT"
+          ? field.selectedOptions[0]?.textContent.trim()
+          : field.value.trim();
+        if (value) lines.push(`${labels[field.name] || field.name}: ${value}`);
+      });
+
+      const recipient = form.dataset.mailTo;
+      const subject = form.dataset.mailSubject || "Website enquiry";
+      window.location.href =
+        `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n\n"))}`;
+    });
+  });
+});

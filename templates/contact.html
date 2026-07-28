@@ -20,11 +20,17 @@
     </div>
 
     <div class="contact-form">
-      <form action="/send" method="POST">
+      <form
+        action="mailto:contact@fusiontechdynamics.com"
+        method="get"
+        data-mail-form="contact"
+        data-mail-to="contact@fusiontechdynamics.com"
+        data-mail-subject="Website project enquiry">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
         <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
         <button type="submit" class="btn-primary">Send Message</button>
+        <p class="static-form-note">This opens your email app with the message ready to send.</p>
       </form>
     </div>
   </div>
