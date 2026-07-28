@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}Projects | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="page-hero solutions-hero">
+  <div class="hero-overlay">
+    <h1>Our Work</h1>
+    <p>Engineering proven on real, in-house platforms — not just slides.</p>
+  </div>
+</section>
+
+<section class="case-study">
+  <div class="container">
+    <span class="pillar-badge">Flagship Project</span>
+    <h2 class="section-title case-title">Iron Bird &amp; 3-Axis Rate Table Test Platform</h2>
+    <p class="case-lead">A complete hardware-in-the-loop (HIL) test and integration rig &mdash; designed, built, and operated <strong>in-house</strong> &mdash; for validating
+      <span class="todo">[ the systems it tested &mdash; e.g. UAV flight controls / avionics / guidance &amp; navigation ]</span>
+      under real-world conditions.</p>
+
+    <div class="case-visual">
+      <div class="ironbird">
+        <div class="ironbird-img"></div>
+        <div class="ironbird-scan"></div>
+        <span class="ironbird-badge"><span class="ironbird-dot"></span> Systems Integration Test &middot; Live</span>
+        <span class="ib-hotspot ib-h1"><span class="ib-pulse"></span><em>Flight controls</em></span>
+        <span class="ib-hotspot ib-h2"><span class="ib-pulse"></span><em>Avionics bay</em></span>
+        <span class="ib-hotspot ib-h3"><span class="ib-pulse"></span><em>Actuators</em></span>
+      </div>
+      <p class="case-visual-cap">Our in-house iron bird &mdash; full systems integration &amp; HIL validation</p>
+    </div>
+
+    <div class="case-grid">
+      <div class="case-gallery">
+        <div class="case-photo">
+          <span>Add photo</span>
+          <small>static/images/flagship-1.jpg</small>
+        </div>
+        <div class="case-photo">
+          <span>Add photo</span>
+          <small>static/images/flagship-2.jpg</small>
+        </div>
+        <div class="case-photo">
+          <span>Add photo</span>
+          <small>static/images/flagship-3.jpg</small>
+        </div>
+      </div>
+
+      <div class="case-details">
+        <h3>What it does</h3>
+        <ul class="pillar-offerings">
+          <li>Hardware-in-the-loop simulation with real-time control integration</li>
+          <li>3-axis rotational testing for IMU / inertial sensor calibration</li>
+          <li>Closed-loop verification against software models</li>
+          <li>Automated data acquisition &amp; test reporting</li>
+        </ul>
+
+        <h3>At a glance</h3>
+        <table class="spec-table">
+          <tr><td>Axes</td><td>3 &mdash; roll / pitch / yaw</td></tr>
+          <tr><td>Validated systems</td><td><span class="todo">[ TODO &mdash; what it tested ]</span></td></tr>
+          <tr><td>Toolchain</td><td>MATLAB / Simulink &middot; LabVIEW &middot; Python</td></tr>
+          <tr><td>Built &amp; operated</td><td>In-house by Fusion Tech Dynamics</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="more-projects">
+  <div class="container">
+    <h2 class="section-title">More Projects Coming</h2>
+    <p>We're documenting more of our embedded, AI, and automation work. Have a system to build, test, or scale?</p>
+    <a href="/contact" class="btn-primary">Start a Conversation</a>
+  </div>
+</section>
+{% endblock %}

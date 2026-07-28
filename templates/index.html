@@ -1,0 +1,156 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="hero hero-editorial hero-centered">
+  <canvas class="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">&#9679; Intelligent Systems Engineering</span>
+      <h1>Engineering Intelligence into<br><span class="rotator" id="rotator">Every System</span></h1>
+      <p>From a CAD model to a deployed, tested system — hardware, embedded, AI, and software, under one engineering team.</p>
+      <div class="hero-buttons">
+        <a href="/contact" class="btn-primary">Request a Quote</a>
+        <a href="/services" class="btn-secondary">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><strong>UAV &amp; Aerospace</strong><span>Design &amp; integration</span></div>
+        <div class="hero-stat"><strong>HIL / SIL</strong><span>Test &amp; validation</span></div>
+        <div class="hero-stat"><strong>Edge AI</strong><span>Real-time intelligence</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee">
+    <div class="hero-marquee-track">
+      <span>Aerospace</span><span>Avionics</span><span>Autonomy</span><span>Simulation</span><span>Embedded</span><span>Robotics</span><span>Industrial</span><span>Artificial Intelligence</span>
+      <span>Aerospace</span><span>Avionics</span><span>Autonomy</span><span>Simulation</span><span>Embedded</span><span>Robotics</span><span>Industrial</span><span>Artificial Intelligence</span>
+    </div>
+  </div>
+</section>
+
+<section class="home-pillars">
+  <div class="container">
+    <h2 class="section-title">What We Do</h2>
+    <p class="intro">Seven engineering disciplines, one team — so your project never breaks in the handoff between vendors.</p>
+    <div class="home-pillar-grid">
+      <div class="home-pillar">
+        <h3>Systems Engineering &amp; V&amp;V</h3>
+        <p>Requirements, MBSE, and verification for mission-critical systems.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Electronics, Embedded &amp; Hardware</h3>
+        <p>Firmware, custom PCBs, and edge-AI compute built for real-time reliability.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Robotics, Autonomy &amp; AI</h3>
+        <p>ROS, drones, computer vision, and ML deployed on-device.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Test, Simulation &amp; Automation</h3>
+        <p>HIL, Iron Bird, and rate-table rigs — built and operated in-house.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Industrial Automation &amp; Control</h3>
+        <p>PLC, SCADA, HMI, and OT cybersecurity for smarter operations.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Software, IoT &amp; Full-Stack</h3>
+        <p>Connected devices, dashboards, and web apps with engineering-grade UX.</p>
+      </div>
+      <div class="home-pillar">
+        <h3>Mechanical &amp; Product Design</h3>
+        <p>CAD, enclosures, and rapid prototyping for whole-product delivery.</p>
+      </div>
+    </div>
+    <div class="home-pillars-cta">
+      <a href="/services" class="btn-primary">See All Services</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats-bar">
+  <div class="container stats-grid">
+    <div class="stat"><strong>50+</strong><span>Projects delivered</span></div>
+    <div class="stat"><strong>12+</strong><span>Engineers on the team</span></div>
+    <div class="stat"><strong>5</strong><span>Industries served</span></div>
+    <div class="stat"><strong>7+</strong><span>Years combined experience</span></div>
+  </div>
+</section>
+
+<section class="trust-section">
+  <div class="container">
+    <h2 class="section-title">Trusted by Clients Worldwide</h2>
+    <p class="trust-disclaimer todo">&#9888; Sample content &mdash; replace the ratings, numbers, names &amp; quotes with your real data before publishing.</p>
+
+    <div class="trust-badges">
+      <a class="trust-badge" href="#" rel="noopener">
+        <span class="trust-badge-platform">Upwork</span>
+        <span class="trust-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="trust-badge-meta">[your rating] &middot; [N] reviews</span>
+        <span class="trust-badge-link">Add profile link &rarr;</span>
+      </a>
+      <a class="trust-badge" href="#" rel="noopener">
+        <span class="trust-badge-platform">Fiverr</span>
+        <span class="trust-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="trust-badge-meta">[your level] &middot; [N] reviews</span>
+        <span class="trust-badge-link">Add profile link &rarr;</span>
+      </a>
+    </div>
+
+    <div class="testimonial-grid">
+      <figure class="testimonial">
+        <blockquote>Fusion Tech Dynamics delivered our UAV flight-control firmware ahead of schedule &mdash; their HIL testing caught timing issues we'd never have found in the field.</blockquote>
+        <figcaption><strong>[Client name]</strong><span>[Role], [Aerospace company]</span></figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>They automated our production line end to end &mdash; PLC, SCADA, and the dashboard &mdash; and the handover documentation was flawless.</blockquote>
+        <figcaption><strong>[Client name]</strong><span>[Role], [Manufacturer]</span></figcaption>
+      </figure>
+      <figure class="testimonial">
+        <blockquote>We needed computer vision running on a Jetson at the edge. FTD shipped a working prototype in three weeks.</blockquote>
+        <figcaption><strong>[Client name]</strong><span>[Role], [Startup]</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="insights-section">
+  <div class="container">
+    <h2 class="section-title">Insights</h2>
+    <p class="insights-intro">Engineering notes from the workbench &mdash; what we're building and learning. <span class="todo">(sample topics &mdash; replace with your real posts)</span></p>
+    <div class="insights-grid">
+      <article class="insight-card">
+        <span class="insight-tag">Test &amp; Validation</span>
+        <h3>Why We Build Our Own Test Rigs</h3>
+        <p>How an in-house Iron Bird and HIL bench cut pre-flight risk and catch failures before the field.</p>
+        <a href="#" class="insight-link">Read article &rarr;</a>
+      </article>
+      <article class="insight-card">
+        <span class="insight-tag">Systems Engineering</span>
+        <h3>MBSE in Practice</h3>
+        <p>From requirements to verified hardware &mdash; how model-based engineering keeps complex builds on spec.</p>
+        <a href="#" class="insight-link">Read article &rarr;</a>
+      </article>
+      <article class="insight-card">
+        <span class="insight-tag">AI &amp; Edge</span>
+        <h3>Computer Vision on Jetson Orin</h3>
+        <p>Deploying real-time perception on-device, where latency and reliability actually matter.</p>
+        <a href="#" class="insight-link">Read article &rarr;</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="bold-cta">
+  <div class="container">
+    <h2>Let's build something<br>mission-critical.</h2>
+    <p>From concept to validated hardware &mdash; engineered, tested, and proven in-house.</p>
+    <div class="bold-cta-buttons">
+      <a href="/contact" class="btn-primary">Request a Quote</a>
+      <a href="/contact" class="btn-secondary">Book a Call</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

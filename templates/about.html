@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block title %}About Us | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="page-hero about-banner">
+  <div class="hero-overlay">
+    <h1>About Fusion Tech Dynamics</h1>
+    <p>Engineering the mission-critical &mdash; designed, built, and proven in-house.</p>
+  </div>
+</section>
+
+<section class="about-split">
+  <div class="container about-flex">
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>Founded in 2025 in Islamabad, Fusion Tech Dynamics is an engineering firm built by specialists from Pakistan's aerospace, defense, and industrial sectors. We design, build, and validate intelligent systems end-to-end &mdash; mechanical, electronics, embedded, AI, and software &mdash; and we prove them on test infrastructure we build and operate in-house.</p>
+      <p>Much of our work is delivered under strict confidentiality for clients in sensitive sectors. What we can share openly is our capability, our in-house test platforms, and the pedigree of our engineering team.</p>
+    </div>
+    <div class="about-image">
+      <img src="{{ url_for('static', filename='images/hero-drone.jpg') }}" alt="Fusion Tech Dynamics engineering">
+    </div>
+  </div>
+  <div class="container about-strip">
+    <div><strong>2025</strong><span>Founded &middot; Islamabad</span></div>
+    <div><strong>Aerospace &middot; Defense &middot; Industrial</strong><span>Sectors served</span></div>
+    <div><strong>DO-160 &middot; MIL-STD &middot; MBSE</strong><span>Standards &amp; methods</span></div>
+    <div><strong>Iron Bird &middot; HIL &middot; Rate Tables</strong><span>In-house test rigs</span></div>
+  </div>
+</section>
+
+<section class="mv-section">
+  <div class="container mv-cards">
+
+    <div class="mv-card">
+      <div class="mv-card-label">What Drives Us</div>
+      <svg class="mv-icon" viewBox="0 0 80 80" aria-hidden="true">
+        <circle class="mv-spin" cx="40" cy="40" r="30" fill="none" stroke="#3b82f6" stroke-width="2" stroke-dasharray="6 9" stroke-opacity="0.75"/>
+        <circle cx="40" cy="40" r="20" fill="none" stroke="#60a5fa" stroke-width="2"/>
+        <line x1="40" y1="5" x2="40" y2="16" stroke="#60a5fa" stroke-width="2"/>
+        <line x1="40" y1="64" x2="40" y2="75" stroke="#60a5fa" stroke-width="2"/>
+        <line x1="5" y1="40" x2="16" y2="40" stroke="#60a5fa" stroke-width="2"/>
+        <line x1="64" y1="40" x2="75" y2="40" stroke="#60a5fa" stroke-width="2"/>
+        <circle class="mv-core" cx="40" cy="40" r="5" fill="#22d3ee"/>
+      </svg>
+      <h2>Our Mission</h2>
+      <p>To deliver mission-critical engineering &mdash; designed, built, and proven in-house &mdash; with the rigor of aerospace and the speed of a startup.</p>
+    </div>
+
+    <div class="mv-card">
+      <div class="mv-card-label">Where We're Headed</div>
+      <svg class="mv-icon" viewBox="0 0 80 80" aria-hidden="true">
+        <circle cx="40" cy="40" r="30" fill="none" stroke="#3b82f6" stroke-width="2" stroke-opacity="0.35"/>
+        <circle cx="40" cy="40" r="20" fill="none" stroke="#3b82f6" stroke-width="2" stroke-opacity="0.35"/>
+        <circle cx="40" cy="40" r="10" fill="none" stroke="#3b82f6" stroke-width="2" stroke-opacity="0.35"/>
+        <line x1="10" y1="40" x2="70" y2="40" stroke="#1e3a5f" stroke-width="1.5"/>
+        <line x1="40" y1="10" x2="40" y2="70" stroke="#1e3a5f" stroke-width="1.5"/>
+        <g class="mv-radar">
+          <circle cx="40" cy="40" r="30" fill="none" stroke="none"/>
+          <line x1="40" y1="40" x2="40" y2="11" stroke="#22d3ee" stroke-width="2.5"/>
+          <circle cx="40" cy="13" r="3" fill="#22d3ee"/>
+        </g>
+      </svg>
+      <h2>Our Vision</h2>
+      <p>To become the engineering partner of choice for intelligent systems across aerospace, defense, and industry &mdash; trusted with the hardest, most sensitive problems.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="team-section">
+  <div class="container">
+    <h2 class="section-title">Our Engineering Team</h2>
+    <p class="team-intro">A small, senior team with real aerospace, defense, and software pedigree &mdash; engineers who have delivered across the full systems lifecycle, from architecture to validated hardware.</p>
+    <div class="team-grid">
+
+      <div class="team-card">
+        <h3 class="team-role">Founder &amp; CEO</h3>
+        <span class="team-disc">Systems &amp; Avionics Engineering</span>
+        <p>10 years in aerospace systems engineering &mdash; MBSE, avionics integration, and verification &amp; validation to DO-160 / MIL-STD standards. Designed and leads our in-house Iron Bird and 3-axis rate-table platforms.</p>
+        <span class="team-edu">B.E. Electrical Engineering</span>
+      </div>
+
+      <div class="team-card">
+        <h3 class="team-role">Software &amp; Infrastructure Lead</h3>
+        <span class="team-disc">Full-Stack &amp; DevOps</span>
+        <p>7+ years building production software and real-time data platforms &mdash; cloud infrastructure (AWS, Kubernetes), backend APIs, and industrial PLC / SCADA integration.</p>
+        <span class="team-edu">B.E. Software Engineering</span>
+      </div>
+
+      <div class="team-card">
+        <h3 class="team-role">Embedded &amp; AI Engineer</h3>
+        <span class="team-disc">Firmware &middot; ML &middot; Signal Processing</span>
+        <p>Embedded firmware, applied AI, and signal processing &mdash; computer vision, ML deployment, and hardware-in-the-loop test infrastructure.</p>
+        <span class="team-edu">B.E. Electrical Engineering</span>
+      </div>
+
+      <div class="team-card">
+        <h3 class="team-role">RF &amp; Communications Engineer</h3>
+        <span class="team-disc">Radar &middot; SDR &middot; Signal Processing</span>
+        <p>RF and microwave systems &mdash; radar front-ends (FMCW / mmWave), software-defined radio, link-budget analysis, and antenna integration.</p>
+        <span class="team-edu">B.E. Electronics Engineering</span>
+      </div>
+
+      <div class="team-card">
+        <h3 class="team-role">Electronics &amp; Hardware Engineer</h3>
+        <span class="team-disc">PCB &middot; FPGA &middot; Integration</span>
+        <p>Custom multi-layer PCB design, FPGA development, and sensor &amp; flight-controller integration.</p>
+        <span class="team-edu">B.S. Electrical Engineering</span>
+      </div>
+
+      <div class="team-card">
+        <h3 class="team-role">Frontend &amp; UI/UX Developer</h3>
+        <span class="team-disc">React &middot; Next.js &middot; Dashboards</span>
+        <p>React / Next.js interfaces, design-to-code handoff, and real-time operational dashboards.</p>
+        <span class="team-edu">B.S. Computer Science</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container">
+    <h2 class="section-heading">Why Fusion Tech Dynamics?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>We Prove It, Not Just Design It</h3>
+        <p>We build and operate our own test rigs &mdash; Iron Bird, HIL, and rate tables &mdash; so systems are validated under real conditions before they ever reach the field.</p>
+      </div>
+      <div class="why-card">
+        <h3>Aerospace Rigor, Startup Speed</h3>
+        <p>Defense-grade process &mdash; MBSE, V&amp;V, and DO-160 / MIL-STD discipline &mdash; delivered with the agility and cost of a lean, senior team.</p>
+      </div>
+      <div class="why-card">
+        <h3>One Team, the Whole Stack</h3>
+        <p>Mechanical, electronics, embedded, AI, and software under one roof &mdash; so your project never breaks in the handoff between vendors.</p>
+      </div>
+      <div class="why-card">
+        <h3>Trusted With Sensitive Work</h3>
+        <p>Much of what we do is under NDA &mdash; a reflection of the mission-critical, confidential nature of the systems we're trusted to engineer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta-split">
+  <div class="container cta-flex">
+    <div class="cta-text">
+      <h2>Have a system to build, test, or validate?</h2>
+      <p>Partner with a team that designs, builds, and proves intelligent systems end-to-end &mdash; from concept to validated hardware.</p>
+      <a href="/contact" class="btn-primary">Get in Touch</a>
+    </div>
+    <div class="cta-image">
+      <img src="{{ url_for('static', filename='images/joinus.jpg') }}" alt="Build with Fusion Tech Dynamics" />
+    </div>
+  </div>
+</section>
+{% endblock %}

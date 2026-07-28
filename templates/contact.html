@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="page-hero contact-hero">
+  <div class="hero-overlay">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you and discuss your project needs</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container contact-container">
+    <div class="contact-info">
+      <h3>Reach Us</h3>
+      <p><strong>Location:</strong> Islamabad, Pakistan</p>
+      <p><strong>Phone:</strong> <a href="tel:+923475370806">+92 347 5370806</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@fusiontectdynamics.com">contact@fusiontectdynamics.com</a></p>
+    </div>
+
+    <div class="contact-form">
+      <form action="/send" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Careers | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="page-hero careers-hero">
+  <div class="hero-overlay">
+    <h1>Careers</h1>
+    <p>Join Fusion Tech Dynamics and Help Engineer the Future</p>
+  </div>
+</section>
+
+<section class="careers-section">
+  <div class="container">
+    <h2>Why Work With Us?</h2>
+    <p>We are a forward-thinking team focused on innovation, collaboration, and solving real-world engineering challenges.</p>
+
+    <div class="job-listings">
+      <div class="job-card">
+        <h3>Embedded Systems Engineer</h3>
+        <p>Experience with C/C++, RTOS, and microcontroller development. Design and implement embedded hardware/software systems.</p>
+      </div>
+
+      <div class="job-card">
+        <h3>Machine Learning Engineer</h3>
+        <p>Develop and deploy ML models for predictive maintenance, data analytics, and intelligent automation systems.</p>
+      </div>
+
+      <div class="job-card">
+        <h3>Systems Engineer (R&D)</h3>
+        <p>Lead system architecture, requirement analysis, and model-based design for aerospace and autonomous systems.</p>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h2>Think You’re a Good Fit?</h2>
+      <a href="/contact" class="btn-primary">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<section class="career-growth fade-on-scroll">
+  <div class="container">
+    <h2>Internships & Training Programs</h2>
+    <p>At Fusion Tech Dynamics, we offer immersive internships and hands-on technical training to help the next generation of engineers gain real-world experience.</p>
+
+    <div class="training-grid">
+      <div class="training-card">
+        <h4>Embedded Systems Internship</h4>
+        <p>Work alongside our engineering team to develop and test embedded solutions using real-time platforms and microcontrollers.</p>
+      </div>
+
+      <div class="training-card">
+        <h4>AI/ML Training Program</h4>
+        <p>Build intelligent systems using supervised, unsupervised learning and real-world sensor datasets in our lab environment.</p>
+      </div>
+
+      <div class="training-card">
+        <h4>Systems Engineering Bootcamp</h4>
+        <p>Get trained on model-based design, simulation, requirement validation, and system integration techniques.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="internship-form-section fade-on-scroll">
+  <div class="container">
+    <h2>Apply for Internship</h2>
+    <form method="POST" action="/apply-internship" class="internship-form">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="university" placeholder="University / Institute" required>
+      <select name="field" required>
+        <option value="">Select Field</option>
+        <option value="embedded">Embedded Systems</option>
+        <option value="ai_ml">AI / Machine Learning</option>
+        <option value="systems">Systems Engineering</option>
+      </select>
+      <textarea name="message" rows="4" placeholder="Why do you want to join us?" required></textarea>
+      <button type="submit" class="btn-primary">Submit Application</button>
+    </form>
+  </div>
+</section>
+
+{% endblock %}

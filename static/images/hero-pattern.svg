@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow" cx="82%" cy="18%" r="70%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <!-- circuit traces -->
+  <g stroke="#60a5fa" stroke-opacity="0.18" stroke-width="1.5" fill="none">
+    <path d="M0 120 H260 l60 60 H560"/>
+    <path d="M0 300 H140 l50 -50 H420 l40 40 H700"/>
+    <path d="M0 470 H320 l70 -70 H520"/>
+    <path d="M180 600 V430 l60 -60 V210"/>
+    <path d="M470 600 V360 l50 -50 V160"/>
+    <path d="M760 600 V470 l60 -60 H1000"/>
+    <path d="M620 80 H880 l60 60 V300"/>
+  </g>
+
+  <!-- circuit nodes -->
+  <g fill="#60a5fa" fill-opacity="0.40">
+    <circle cx="260" cy="120" r="4"/>
+    <circle cx="560" cy="180" r="4"/>
+    <circle cx="420" cy="250" r="4"/>
+    <circle cx="700" cy="290" r="4"/>
+    <circle cx="320" cy="470" r="4"/>
+    <circle cx="520" cy="400" r="4"/>
+    <circle cx="240" cy="370" r="4"/>
+    <circle cx="520" cy="310" r="4"/>
+    <circle cx="820" cy="540" r="4"/>
+    <circle cx="880" cy="80" r="4"/>
+    <circle cx="940" cy="300" r="4"/>
+  </g>
+
+  <!-- radar rings -->
+  <g stroke="#93c5fd" stroke-opacity="0.12" fill="none" stroke-width="1.5">
+    <circle cx="1010" cy="120" r="70"/>
+    <circle cx="1010" cy="120" r="130"/>
+    <circle cx="1010" cy="120" r="195"/>
+  </g>
+  <g stroke="#93c5fd" stroke-opacity="0.10" fill="none" stroke-width="1.5">
+    <circle cx="120" cy="520" r="50"/>
+    <circle cx="120" cy="520" r="95"/>
+  </g>
+</svg>
