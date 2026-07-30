@@ -1,6 +1,19 @@
+from hashlib import sha256
+from pathlib import Path
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
+
+
+@app.context_processor
+def inject_asset_version():
+    """Cache-bust CSS and JavaScript whenever their contents change."""
+    digest = sha256()
+    for asset in ("static/css/styles.css", "static/js/script.js"):
+        digest.update((Path(__file__).parent / asset).read_bytes())
+    return {"asset_version": digest.hexdigest()[:12]}
+
 
 @app.route("/")
 def home():
