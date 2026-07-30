@@ -276,33 +276,49 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { passive: true });
 });
 
-// Static-site forms: prepare a professional email without requiring a server.
+// Secure static-site forms with inline feedback.
 document.addEventListener("DOMContentLoaded", () => {
-  const labels = {
-    name: "Name",
-    email: "Email",
-    university: "University / Institute",
-    field: "Field",
-    message: "Message"
-  };
+  document.querySelectorAll("[data-secure-form]").forEach(form => {
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector("[data-form-status]");
+    const defaultLabel = button?.dataset.submitLabel || button?.textContent || "Submit";
 
-  document.querySelectorAll("[data-mail-form]").forEach(form => {
-    form.addEventListener("submit", event => {
+    form.addEventListener("submit", async event => {
       event.preventDefault();
       if (!form.reportValidity()) return;
 
-      const lines = [];
-      form.querySelectorAll("[name]").forEach(field => {
-        const value = field.tagName === "SELECT"
-          ? field.selectedOptions[0]?.textContent.trim()
-          : field.value.trim();
-        if (value) lines.push(`${labels[field.name] || field.name}: ${value}`);
-      });
+      if (form.elements._honey?.value) return;
 
-      const recipient = form.dataset.mailTo;
-      const subject = form.dataset.mailSubject || "Website enquiry";
-      window.location.href =
-        `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n\n"))}`;
+      button.disabled = true;
+      button.setAttribute("aria-busy", "true");
+      button.textContent = "Sending…";
+      status.className = "form-status is-pending";
+      status.textContent = "Sending your message securely…";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" }
+        });
+        const result = await response.json().catch(() => ({}));
+
+        if (!response.ok || result.success === "false" || result.success === false) {
+          throw new Error(result.message || "Submission failed");
+        }
+
+        form.reset();
+        status.className = "form-status is-success";
+        status.textContent = form.dataset.successMessage || "Thank you — your message has been sent.";
+      } catch (error) {
+        status.className = "form-status is-error";
+        status.textContent =
+          "We couldn’t send your message right now. Please email contact@fusiontechdynamics.com.";
+      } finally {
+        button.disabled = false;
+        button.removeAttribute("aria-busy");
+        button.textContent = defaultLabel;
+      }
     });
   });
 });

@@ -21,16 +21,27 @@
 
     <div class="contact-form">
       <form
-        action="mailto:contact@fusiontechdynamics.com"
-        method="get"
-        data-mail-form="contact"
-        data-mail-to="contact@fusiontechdynamics.com"
-        data-mail-subject="Website project enquiry">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
-        <p class="static-form-note">This opens your email app with the message ready to send.</p>
+        action="https://formsubmit.co/ajax/contact@fusiontechdynamics.com"
+        method="post"
+        data-secure-form
+        data-success-message="Thank you — your message has been sent. We’ll get back to you shortly.">
+        <input type="hidden" name="_subject" value="New project enquiry from the Fusion Tech Dynamics website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <label for="contact-name">Name</label>
+        <input id="contact-name" type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+
+        <label for="contact-email">Email</label>
+        <input id="contact-email" type="email" name="email" placeholder="Your Email" autocomplete="email" required />
+
+        <label for="contact-message">Project details</label>
+        <textarea id="contact-message" name="message" placeholder="Tell us briefly about your project" rows="6" required></textarea>
+
+        <button type="submit" class="btn-primary" data-submit-label="Send Message">Send Message</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="static-form-note">Your details are used only to respond to your enquiry.</p>
       </form>
     </div>
   </div>

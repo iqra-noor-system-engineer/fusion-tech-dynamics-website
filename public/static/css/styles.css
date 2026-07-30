@@ -831,6 +831,62 @@ header.navbar {
   line-height: 1.5;
 }
 
+.contact-form label,
+.internship-form label {
+  color: #cbd5e1;
+  font-size: 0.86rem;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.form-status {
+  display: none;
+  min-height: 44px;
+  padding: 11px 14px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.form-status.is-pending,
+.form-status.is-success,
+.form-status.is-error {
+  display: block;
+}
+
+.form-status.is-pending {
+  color: #bfdbfe;
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(96, 165, 250, 0.3);
+}
+
+.form-status.is-success {
+  color: #bbf7d0;
+  background: rgba(22, 163, 74, 0.12);
+  border-color: rgba(74, 222, 128, 0.3);
+}
+
+.form-status.is-error {
+  color: #fecaca;
+  background: rgba(220, 38, 38, 0.12);
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.contact-form button:disabled,
+.internship-form button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+}
+
 .legal-section {
   background-color: #0f172a;
   color: #f1f5f9;

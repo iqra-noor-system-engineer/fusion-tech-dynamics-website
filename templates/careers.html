@@ -66,24 +66,39 @@
   <div class="container">
     <h2>Apply for Internship</h2>
     <form
-      method="get"
-      action="mailto:contact@fusiontechdynamics.com"
+      method="post"
+      action="https://formsubmit.co/ajax/contact@fusiontechdynamics.com"
       class="internship-form"
-      data-mail-form="internship"
-      data-mail-to="contact@fusiontechdynamics.com"
-      data-mail-subject="Internship application">
-      <input type="text" name="name" placeholder="Your Full Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="university" placeholder="University / Institute" required>
-      <select name="field" required>
+      data-secure-form
+      data-success-message="Thank you — your internship application has been sent successfully.">
+      <input type="hidden" name="_subject" value="New internship application from the Fusion Tech Dynamics website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <label for="intern-name">Full name</label>
+      <input id="intern-name" type="text" name="name" placeholder="Your Full Name" autocomplete="name" required>
+
+      <label for="intern-email">Email</label>
+      <input id="intern-email" type="email" name="email" placeholder="Your Email" autocomplete="email" required>
+
+      <label for="intern-university">University or institute</label>
+      <input id="intern-university" type="text" name="university" placeholder="University / Institute" autocomplete="organization" required>
+
+      <label for="intern-field">Preferred field</label>
+      <select id="intern-field" name="field" required>
         <option value="">Select Field</option>
         <option value="embedded">Embedded Systems</option>
         <option value="ai_ml">AI / Machine Learning</option>
         <option value="systems">Systems Engineering</option>
       </select>
-      <textarea name="message" rows="4" placeholder="Why do you want to join us?" required></textarea>
-      <button type="submit" class="btn-primary">Submit Application</button>
-      <p class="static-form-note">This opens your email app with the application ready to send.</p>
+
+      <label for="intern-message">Why do you want to join us?</label>
+      <textarea id="intern-message" name="message" rows="4" placeholder="Tell us about your interests and experience" required></textarea>
+
+      <button type="submit" class="btn-primary" data-submit-label="Submit Application">Submit Application</button>
+      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+      <p class="static-form-note">Your details are used only to review your application.</p>
     </form>
   </div>
 </section>
