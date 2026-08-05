@@ -1,38 +1,22 @@
-// Smooth scroll for same-page anchor links
-
-// Example JS for smooth scrolling and navbar behavior
-
+// Same-page navigation and compact header state.
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll("nav a");
-
-  navLinks.forEach(link => {
-    link.addEventListener("click", function(e) {
-      const targetId = this.getAttribute("href");
-      if (targetId.startsWith("#")) {
-        e.preventDefault();
-        document.querySelector(targetId).scrollIntoView({
-          behavior: "smooth"
-        });
-      }
+  document.querySelectorAll("a[href^='#']").forEach(link => {
+    link.addEventListener("click", event => {
+      const selector = link.getAttribute("href");
+      if (!selector || selector === "#") return;
+      const target = document.querySelector(selector);
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll("a[href^='#']");
-
-  links.forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-  });
+  const navbar = document.querySelector("header.navbar");
+  if (navbar) {
+    const updateNavbar = () => navbar.classList.toggle("is-scrolled", window.scrollY > 18);
+    window.addEventListener("scroll", updateNavbar, { passive: true });
+    updateNavbar();
+  }
 });
 
 // In static/js/script.js
@@ -56,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const rotator = document.getElementById("rotator");
   if (rotator) {
     const words = [
-      "Every System", "Aerospace", "Embedded Systems",
-      "Robotics", "Industrial Automation", "Intelligent Software"
+      "Complete Products", "Embedded Systems", "Edge AI",
+      "Aerospace", "Industrial Automation", "Connected Operations"
     ];
     let i = 0;
     setInterval(() => {
@@ -155,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- scroll reveal (progressive enhancement: only hides once JS runs) ---
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const targets = document.querySelectorAll(
-      ".service-card, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card"
+      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card"
     );
     const ro = new IntersectionObserver(entries => {
       entries.forEach(e => {

@@ -11,7 +11,7 @@ PAGES = {
     "/": "index.html",
     "/about": "about/index.html",
     "/services": "services/index.html",
-    "/solutions": "solutions/index.html",
+    "/products": "products/index.html",
     "/contact": "contact/index.html",
     "/careers": "careers/index.html",
     "/training": "training/index.html",

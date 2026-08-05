@@ -1,7 +1,7 @@
 from hashlib import sha256
 from pathlib import Path
 
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template
 
 app = Flask(__name__)
 
@@ -29,7 +29,11 @@ def services():
 
 @app.route("/solutions")
 def solutions():
-    return render_template("solutions.html")
+    return redirect("/products", code=301)
+
+@app.route("/products")
+def products():
+    return render_template("products.html")
 
 @app.route("/contact")
 def contact():
