@@ -20,7 +20,8 @@
     <div class="hs-bg" style="background-image:url('{{ url_for('static', filename='images/hero/orvex-v2.webp') }}')"></div>
     <div class="hs-content">
       <div class="hs-copy">
-        <span class="hs-eyebrow">Orvex &middot; AI video intelligence</span>
+        <img class="hs-logo" src="{{ url_for('static', filename='images/orvex-logo.png') }}" alt="Orvex">
+        <span class="hs-eyebrow">AI video intelligence</span>
         <h2>Cameras see. Orvex understands.</h2>
         <p>Connects the cameras a site already has into one live map, and follows one person across them as a single incident.</p>
         <a href="/products/orvex" class="btn-primary">Explore Orvex</a>
@@ -60,38 +61,6 @@
     <button class="hs-dot" type="button" aria-label="Go to slide 3"></button>
     <button class="hs-dot" type="button" aria-label="Go to slide 4"></button>
     <button class="hs-pause" type="button" aria-label="Pause slideshow"><i class="fas fa-pause" aria-hidden="true"></i></button>
-  </div>
-</section>
-
-<section class="home-section home-products-section">
-  <div class="container">
-    <h2>What we're building now</h2>
-    <div class="home-products">
-      <a class="home-product" href="/products/orvex">
-        <img src="{{ url_for('static', filename='images/products/orvex-connected-video.webp') }}" alt="Six camera feeds following one person from the main gate to the exit" loading="lazy">
-        <div class="home-product-body">
-          <span class="product-status">AI video intelligence</span>
-          <h3>Orvex</h3>
-          <p>Connects the cameras a site already has into one live map.</p>
-        </div>
-      </a>
-      <a class="home-product" href="/products/recura">
-        <img src="{{ url_for('static', filename='images/products/recura-treatment-response.webp') }}" alt="ReCura treatment response chart and visit record, shown with sample data" loading="lazy">
-        <div class="home-product-body">
-          <span class="product-status">Connected healthcare</span>
-          <h3>ReCura</h3>
-          <p>Private patient tracking between visits, in a live dermatology pilot.</p>
-        </div>
-      </a>
-      <a class="home-product" href="/products/cubbo">
-        <img src="{{ url_for('static', filename='images/products/cubbo-brand.webp') }}" alt="Cubbo name with its tagline in English and Urdu" loading="lazy">
-        <div class="home-product-body">
-          <span class="product-status">Screen-free AI toy</span>
-          <h3>Cubbo</h3>
-          <p>A talking teddy bear for young children, in Urdu and English.</p>
-        </div>
-      </a>
-    </div>
   </div>
 </section>
 
@@ -210,9 +179,24 @@
 </section>
 
 <section class="home-cta">
-  <div class="container">
-    <h2>Have a system that needs building?</h2>
-    <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+  <div class="container home-cta-grid">
+    <div>
+      <h2>Bring us the problem. We'll engineer the system.</h2>
+      <p>Whether you need one discipline or a complete product, tell us what you're building and talk it through directly with our engineers.</p>
+      <div class="home-cta-buttons">
+        <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+        <a href="/capabilities" class="btn-secondary">See Our Capabilities</a>
+      </div>
+      <div class="home-cta-contact">
+        <a href="mailto:contact@fusiontechdynamics.com"><i class="fas fa-envelope" aria-hidden="true"></i>contact@fusiontechdynamics.com</a>
+        <a href="tel:+923475370806"><i class="fas fa-phone" aria-hidden="true"></i>+92 347 5370806</a>
+      </div>
+    </div>
+    <ol class="home-cta-steps">
+      <li><span>1</span><div><h3>Tell us what you need</h3><p>Share your idea, requirements or the problem you're trying to solve.</p></div></li>
+      <li><span>2</span><div><h3>We review it with you</h3><p>Our engineers look at the use case, constraints and risks.</p></div></li>
+      <li><span>3</span><div><h3>You get a clear plan</h3><p>We agree the scope, milestones and how the result will be tested.</p></div></li>
+    </ol>
   </div>
 </section>
 {% endblock %}

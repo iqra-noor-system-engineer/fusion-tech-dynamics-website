@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- scroll reveal (progressive enhancement: only hides once JS runs) ---
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const targets = document.querySelectorAll(
-      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card, .home-section:not(.home-products-section) h2, .home-clients-head p, .home-clients-head .btn-secondary, .home-cap, .home-fact, .home-news-card, .home-cta .container"
+      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card, .home-section h2, .home-clients-head p, .home-clients-head .btn-secondary, .home-cap, .home-fact, .home-news-card, .home-cta-grid > *"
     );
     const ro = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -307,21 +307,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Homepage: full-screen hero slider and product card entrance.
+// Homepage: full-screen hero slider.
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  const cards = document.querySelector(".home-products");
-  if (cards && !reduceMotion) {
-    cards.classList.add("is-waiting");
-    const cardObserver = new IntersectionObserver(entries => {
-      if (!entries[0].isIntersecting) return;
-      cards.classList.remove("is-waiting");
-      cards.classList.add("is-in");
-      cardObserver.disconnect();
-    }, { threshold: 0.1 });
-    cardObserver.observe(cards);
-  }
 
   const slider = document.getElementById("heroSlider");
   if (!slider) return;
