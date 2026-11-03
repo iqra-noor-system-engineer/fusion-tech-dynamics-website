@@ -95,19 +95,68 @@
   </div>
 </section>
 
-<section class="home-section">
+<section class="home-section home-clients">
   <div class="container">
-    <h2>We build for clients too</h2>
-    <p class="home-section-intro">The same team takes your system through every stage, from first conversation to tested delivery, so nothing gets lost between vendors.</p>
-    <ol class="home-steps">
-      <li><span>01</span>Mechanical design</li>
-      <li><span>02</span>Electronics &amp; PCB</li>
-      <li><span>03</span>Embedded &amp; IoT</li>
-      <li><span>04</span>AI &amp; vision</li>
-      <li><span>05</span>Software &amp; apps</li>
-      <li><span>06</span>Test &amp; validation</li>
-    </ol>
-    <a href="/capabilities" class="btn-secondary">See Our Capabilities</a>
+    <div class="home-clients-head">
+      <div>
+        <span class="section-kicker">Engineering services</span>
+        <h2>We build for clients too</h2>
+      </div>
+      <div>
+        <p>The same team takes your system through every stage, from first conversation to tested delivery, so nothing gets lost between vendors.</p>
+        <a href="/capabilities" class="btn-secondary">See Our Capabilities</a>
+      </div>
+    </div>
+    <div class="home-caps">
+      <a class="home-cap" href="/services#mechanical">
+        <img src="{{ url_for('static', filename='images/products/scara-engraving-cell.webp') }}" alt="Benchtop robot cell in a guarded aluminium frame" loading="lazy">
+        <div class="home-cap-body">
+          <span>01</span>
+          <h3>Mechanical design</h3>
+          <p>CAD, enclosures, thermal and prototyping.</p>
+        </div>
+      </a>
+      <a class="home-cap" href="/services#pcb">
+        <img src="{{ url_for('static', filename='images/services/embedded.jpg') }}" alt="Close-up of a compact circuit board" loading="lazy">
+        <div class="home-cap-body">
+          <span>02</span>
+          <h3>Electronics &amp; PCB</h3>
+          <p>Schematics and boards up to 8 layers.</p>
+        </div>
+      </a>
+      <a class="home-cap" href="/services#embedded">
+        <img src="{{ url_for('static', filename='images/products/embedded-controller-family.webp') }}" alt="Family of embedded controllers and gateways on a bench" loading="lazy">
+        <div class="home-cap-body">
+          <span>03</span>
+          <h3>Embedded &amp; IoT</h3>
+          <p>Board bring-up, embedded Linux and connectivity.</p>
+        </div>
+      </a>
+      <a class="home-cap" href="/services#ai">
+        <img src="{{ url_for('static', filename='images/services/vision.jpg') }}" alt="Vision processor board held beside a camera lens" loading="lazy">
+        <div class="home-cap-body">
+          <span>04</span>
+          <h3>AI &amp; vision</h3>
+          <p>Computer vision and edge AI, deployed on-device.</p>
+        </div>
+      </a>
+      <a class="home-cap" href="/services#software">
+        <img src="{{ url_for('static', filename='images/products/company-lms-platform.webp') }}" alt="Dashboard shown on a laptop and tablet" loading="lazy">
+        <div class="home-cap-body">
+          <span>05</span>
+          <h3>Software &amp; apps</h3>
+          <p>Dashboards, web, mobile and cloud.</p>
+        </div>
+      </a>
+      <a class="home-cap" href="/capabilities#three-axis-rate-table">
+        <img src="{{ url_for('static', filename='images/products/three-axis-uav-rate-table-v3.webp') }}" alt="Three-axis motion test table holding a small quadcopter" loading="lazy">
+        <div class="home-cap-body">
+          <span>06</span>
+          <h3>Test &amp; validation</h3>
+          <p>HIL/SIL, rate-table rigs and V&amp;V evidence.</p>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
