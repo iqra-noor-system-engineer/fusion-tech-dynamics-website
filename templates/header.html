@@ -18,16 +18,16 @@
       <ul class="nav-links">
         <li><a href="{{ url_for('home') }}" class="{% if current == 'home' %}active{% endif %}">Home</a></li>
         <li><a href="{{ url_for('about') }}" class="{% if current == 'about' %}active{% endif %}">About</a></li>
+        <li><a href="{{ url_for('products') }}" class="{% if current and current.startswith('product') %}active{% endif %}">Products</a></li>
+        <li><a href="{{ url_for('capabilities') }}" class="{% if current == 'capabilities' %}active{% endif %}">Capabilities</a></li>
         <li><a href="{{ url_for('services') }}" class="{% if current == 'services' %}active{% endif %}">Services</a></li>
-        <li><a href="{{ url_for('products') }}" class="{% if current == 'products' %}active{% endif %}">Products</a></li>
-        <li><a href="/training" class="{% if current == 'training' %}active{% endif %}">Training</a></li>
         <li><a href="/careers" class="{% if current == 'careers' %}active{% endif %}">Careers</a></li>
         <li><a href="{{ url_for('contact') }}" class="{% if current == 'contact' %}active{% endif %}">Contact</a></li>
       </ul>
-      <a href="/contact" class="btn-primary nav-cta-mobile">Request a Quote</a>
+      <a href="/contact" class="btn-primary nav-cta-mobile">Talk to Our Engineers</a>
     </nav>
     <div class="cta">
-      <a href="/contact" class="btn-primary">Request a Quote</a>
+      <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
     </div>
   </div>
 </header>

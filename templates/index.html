@@ -11,8 +11,8 @@
       <h1>Engineering Intelligence into<br><span class="rotator" id="rotator">Every System</span></h1>
       <p>From a CAD model to a deployed, tested system — hardware, embedded, AI, and software, under one engineering team.</p>
       <div class="hero-buttons">
-        <a href="/contact" class="btn-primary">Request a Quote</a>
-        <a href="/services" class="btn-secondary">Explore Services</a>
+        <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+        <a href="/products" class="btn-secondary">See Our Products</a>
       </div>
       <div class="hero-stats">
         <div class="hero-stat"><strong>UAV &amp; Aerospace</strong><span>Design &amp; integration</span></div>
@@ -30,115 +30,163 @@
   </div>
 </section>
 
-<section class="home-pillars">
+<!-- Our products -->
+<section class="featured-products-home">
   <div class="container">
-    <h2 class="section-title">What We Do</h2>
-    <p class="intro">Seven engineering disciplines, one team — so your project never breaks in the handoff between vendors.</p>
-    <div class="home-pillar-grid">
-      <div class="home-pillar">
-        <h3>Systems Engineering &amp; V&amp;V</h3>
-        <p>Requirements, MBSE, and verification for mission-critical systems.</p>
+    <div class="home-section-head">
+      <div>
+        <span class="section-eyebrow">Our Products</span>
+        <h2 class="section-title">What we're building now</h2>
       </div>
-      <div class="home-pillar">
-        <h3>Electronics, Embedded &amp; Hardware</h3>
-        <p>Firmware, custom PCBs, and edge-AI compute built for real-time reliability.</p>
-      </div>
-      <div class="home-pillar">
-        <h3>Robotics, Autonomy &amp; AI</h3>
-        <p>ROS, drones, computer vision, and ML deployed on-device.</p>
-      </div>
-      <div class="home-pillar">
-        <h3>Test, Simulation &amp; Automation</h3>
-        <p>HIL, Iron Bird, and rate-table rigs — built and operated in-house.</p>
-      </div>
-      <div class="home-pillar">
-        <h3>Industrial Automation &amp; Control</h3>
-        <p>PLC, SCADA, HMI, and OT cybersecurity for smarter operations.</p>
-      </div>
-      <div class="home-pillar">
-        <h3>Software, IoT &amp; Full-Stack</h3>
-        <p>Connected devices, dashboards, and web apps with engineering-grade UX.</p>
-      </div>
-      <div class="home-pillar">
+      <a href="/products" class="text-link">All products &rarr;</a>
+    </div>
+    <div class="featured-product-grid featured-product-grid-3">
+      <a class="featured-product" href="/products/orvex">
+        <img src="{{ url_for('static', filename='images/products/orvex-connected-video.webp') }}" alt="Six camera feeds following one person from the main gate to the exit" loading="lazy">
+        <span>AI Video Intelligence</span>
+        <h3>Orvex</h3>
+        <p>Cameras see. Orvex understands. Connects the cameras you already own into one live map.</p>
+      </a>
+      <a class="featured-product" href="/products/recura">
+        <img src="{{ url_for('static', filename='images/products/recura-treatment-response.webp') }}" alt="ReCura treatment response chart and visit record, shown with sample data" loading="lazy">
+        <span>Connected Healthcare</span>
+        <h3>ReCura</h3>
+        <p>Private, encrypted patient tracking between visits, now in a live dermatology pilot.</p>
+      </a>
+      <a class="featured-product" href="/products/cubbo">
+        <img src="{{ url_for('static', filename='images/products/cubbo-brand.webp') }}" alt="Cubbo name with its tagline in English and Urdu" loading="lazy">
+        <span>Screen-Free AI Toy</span>
+        <h3>Cubbo</h3>
+        <p>The friend who talks back. An AI teddy bear for young children, in Urdu and English.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Why we build -->
+<section class="section-light">
+  <div class="container">
+    <span class="light-kicker">Why We Build</span>
+    <h2>Technology made here, for the people who use it</h2>
+    <p class="light-intro">We are an Islamabad engineering team building systems their users can rely on. Three ideas guide what we make.</p>
+    <div class="light-grid">
+      <div class="light-card"><h3>Made for local needs</h3><p>We start from real problems close to home, like a talking toy that speaks Urdu.</p></div>
+      <div class="light-card"><h3>Data stays protected</h3><p>Orvex runs on-site. ReCura encrypts patient records on the clinic's device before upload.</p></div>
+      <div class="light-card"><h3>Proven before it ships</h3><p>We build our own test infrastructure, because a system should earn trust before it reaches the field.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- What we do: end-to-end engineering pipeline -->
+<section class="pipeline-section">
+  <div class="container">
+    <span class="section-eyebrow">How We Build</span>
+    <h2 class="section-title">One team, from concept to validated product.</h2>
+    <p class="intro">Most products break in the handoffs between vendors. We don't hand off — we take your system through every stage in-house, and prove it works before it ships.</p>
+    <ol class="pipeline">
+      <li class="pipeline-step">
+        <span class="pipeline-num">01</span>
         <h3>Mechanical &amp; Product Design</h3>
-        <p>CAD, enclosures, and rapid prototyping for whole-product delivery.</p>
+        <p>CAD, enclosures, thermal &amp; prototyping.</p>
+      </li>
+      <li class="pipeline-step">
+        <span class="pipeline-num">02</span>
+        <h3>Electronics &amp; PCB</h3>
+        <p>Schematics and boards up to 8 layers.</p>
+      </li>
+      <li class="pipeline-step">
+        <span class="pipeline-num">03</span>
+        <h3>Embedded, Firmware &amp; IoT</h3>
+        <p>Board bring-up, embedded Linux &amp; connectivity.</p>
+      </li>
+      <li class="pipeline-step">
+        <span class="pipeline-num">04</span>
+        <h3>AI, Vision &amp; Autonomy</h3>
+        <p>Computer vision &amp; edge AI, deployed on-device.</p>
+      </li>
+      <li class="pipeline-step">
+        <span class="pipeline-num">05</span>
+        <h3>Software &amp; Apps</h3>
+        <p>Dashboards, web &amp; mobile, and cloud.</p>
+      </li>
+      <li class="pipeline-step">
+        <span class="pipeline-num">06</span>
+        <h3>Test &amp; Validation</h3>
+        <p>HIL/SIL, rate-table rigs &amp; V&amp;V evidence.</p>
+      </li>
+    </ol>
+    <p class="pipeline-underpin">Underpinned by <strong>Systems Engineering &amp; V&amp;V</strong>, <strong>RF &amp; Signal Processing</strong>, and <strong>Industrial Automation (SCADA/PLC)</strong>.</p>
+    <div class="home-pillars-cta">
+      <a href="/capabilities" class="btn-primary">See Our Capabilities</a>
+    </div>
+  </div>
+</section>
+
+<!-- Real-photo band: built & validated in-house -->
+<section class="photo-band" style="--band-img:url('{{ url_for('static', filename='images/iron-bird.jpg') }}')">
+  <div class="container photo-band-inner">
+    <div class="photo-band-copy">
+      <span class="section-eyebrow">Built In-House</span>
+      <h2>Engineered, built, and validated<br>under one roof.</h2>
+      <p>We design our own test infrastructure — including an Iron Bird and a 3-axis rate-table HIL bench — so hardware is proven against real evidence before it ever reaches the field.</p>
+      <a href="/capabilities#aerospace-test-products" class="btn-secondary">See our test platforms</a>
+    </div>
+  </div>
+</section>
+
+<!-- Client journey -->
+<section class="section-light">
+  <div class="container">
+    <span class="light-kicker">Working With Us</span>
+    <h2>A clear path from first conversation to delivery</h2>
+    <p class="light-intro">You work with the same accountable team at every stage, with evidence you can review along the way.</p>
+    <div class="light-grid">
+      <div class="light-card"><strong>01</strong><h3>Understand the problem</h3><p>We start with your use case, constraints and risks, before proposing a solution.</p></div>
+      <div class="light-card"><strong>02</strong><h3>Agree the requirements</h3><p>Use cases, interfaces and acceptance criteria are settled before detailed development begins.</p></div>
+      <div class="light-card"><strong>03</strong><h3>Design the architecture</h3><p>Mechanical, electronics, firmware, AI and software are planned as one system.</p></div>
+      <div class="light-card"><strong>04</strong><h3>Build with visible milestones</h3><p>Design reviews, working demonstrations and documented decisions keep everyone aligned.</p></div>
+      <div class="light-card"><strong>05</strong><h3>Verify the result</h3><p>Traceable tests and integration evidence are treated as engineering deliverables.</p></div>
+      <div class="light-card"><strong>06</strong><h3>Hand over and support</h3><p>We deliver production handover and stay available as your system goes into use.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- Milestones -->
+<section class="milestones">
+  <div class="container">
+    <span class="section-eyebrow">Our Track Record</span>
+    <h2 class="section-title">Milestones</h2>
+    <div class="milestone-grid">
+      <div class="milestone-item">
+        <span class="milestone-tag">2025 &middot; Founded</span>
+        <p>Fusion Tech Dynamics established in Islamabad by engineers from Pakistan's aerospace, defense and industrial sectors.</p>
+      </div>
+      <div class="milestone-item">
+        <span class="milestone-tag">In-house &middot; Test rig operational</span>
+        <p>Designed and built our own Iron Bird and 3-axis rate-table HIL bench for hardware-in-the-loop validation.</p>
+      </div>
+      <div class="milestone-item">
+        <span class="milestone-tag">International &middot; Clients abroad</span>
+        <p>Working with international clients, with engineering and software delivered across borders.</p>
+      </div>
+      <div class="milestone-item">
+        <span class="milestone-tag">Edge AI &middot; On-device deployment</span>
+        <p>Built computer-vision systems that run fully on-device at the edge.</p>
       </div>
     </div>
-    <div class="home-pillars-cta">
-      <a href="/services" class="btn-primary">See All Services</a>
-    </div>
   </div>
 </section>
 
-<section class="stats-bar">
-  <div class="container stats-grid">
-    <div class="stat"><strong>50+</strong><span>Projects delivered</span></div>
-    <div class="stat"><strong>12+</strong><span>Engineers on the team</span></div>
-    <div class="stat"><strong>5</strong><span>Industries served</span></div>
-    <div class="stat"><strong>7+</strong><span>Years combined experience</span></div>
-  </div>
-</section>
-
-<section class="trust-section">
+<!-- News -->
+<section class="section-light">
   <div class="container">
-    <h2 class="section-title">Trusted by Clients Worldwide</h2>
-    <p class="trust-disclaimer todo">&#9888; Sample content &mdash; replace the ratings, numbers, names &amp; quotes with your real data before publishing.</p>
-
-    <div class="trust-badges">
-      <a class="trust-badge" href="#" rel="noopener">
-        <span class="trust-badge-platform">Upwork</span>
-        <span class="trust-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="trust-badge-meta">[your rating] &middot; [N] reviews</span>
-        <span class="trust-badge-link">Add profile link &rarr;</span>
-      </a>
-      <a class="trust-badge" href="#" rel="noopener">
-        <span class="trust-badge-platform">Fiverr</span>
-        <span class="trust-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span class="trust-badge-meta">[your level] &middot; [N] reviews</span>
-        <span class="trust-badge-link">Add profile link &rarr;</span>
-      </a>
-    </div>
-
-    <div class="testimonial-grid">
-      <figure class="testimonial">
-        <blockquote>Fusion Tech Dynamics delivered our UAV flight-control firmware ahead of schedule &mdash; their HIL testing caught timing issues we'd never have found in the field.</blockquote>
-        <figcaption><strong>[Client name]</strong><span>[Role], [Aerospace company]</span></figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote>They automated our production line end to end &mdash; PLC, SCADA, and the dashboard &mdash; and the handover documentation was flawless.</blockquote>
-        <figcaption><strong>[Client name]</strong><span>[Role], [Manufacturer]</span></figcaption>
-      </figure>
-      <figure class="testimonial">
-        <blockquote>We needed computer vision running on a Jetson at the edge. FTD shipped a working prototype in three weeks.</blockquote>
-        <figcaption><strong>[Client name]</strong><span>[Role], [Startup]</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<section class="insights-section">
-  <div class="container">
-    <h2 class="section-title">Insights</h2>
-    <p class="insights-intro">Engineering notes from the workbench &mdash; what we're building and learning. <span class="todo">(sample topics &mdash; replace with your real posts)</span></p>
-    <div class="insights-grid">
-      <article class="insight-card">
-        <span class="insight-tag">Test &amp; Validation</span>
-        <h3>Why We Build Our Own Test Rigs</h3>
-        <p>How an in-house Iron Bird and HIL bench cut pre-flight risk and catch failures before the field.</p>
-        <a href="#" class="insight-link">Read article &rarr;</a>
-      </article>
-      <article class="insight-card">
-        <span class="insight-tag">Systems Engineering</span>
-        <h3>MBSE in Practice</h3>
-        <p>From requirements to verified hardware &mdash; how model-based engineering keeps complex builds on spec.</p>
-        <a href="#" class="insight-link">Read article &rarr;</a>
-      </article>
-      <article class="insight-card">
-        <span class="insight-tag">AI &amp; Edge</span>
-        <h3>Computer Vision on Jetson Orin</h3>
-        <p>Deploying real-time perception on-device, where latency and reliability actually matter.</p>
-        <a href="#" class="insight-link">Read article &rarr;</a>
-      </article>
+    <span class="light-kicker">News</span>
+    <h2>Latest from Fusion Tech Dynamics</h2>
+    <p class="light-intro">Recent progress across our products.</p>
+    <div class="light-grid">
+      <div class="light-card"><span class="news-date">October 2026</span><h3>Orvex joins WISE Lab Cohort 1</h3><p>Orvex was selected for the first WISE Lab cohort, as we build AI video intelligence for real-world security challenges.</p><a href="/products/orvex">About Orvex &rarr;</a></div>
+      <div class="light-card"><span class="news-date">October 2026</span><h3>ReCura is live in a clinic pilot</h3><p>A practising dermatologist is testing ReCura, and their feedback is shaping features like the visit timeline.</p><a href="/products/recura">About ReCura &rarr;</a></div>
+      <div class="light-card"><span class="news-date">August 2026</span><h3>Cubbo speaks Urdu and English</h3><p>Our prototype voice pipeline completed its first end-to-end test, from a child's speech to a spoken reply.</p><a href="/products/cubbo">About Cubbo &rarr;</a></div>
     </div>
   </div>
 </section>
@@ -148,8 +196,8 @@
     <h2>Let's build something<br>mission-critical.</h2>
     <p>From concept to validated hardware &mdash; engineered, tested, and proven in-house.</p>
     <div class="bold-cta-buttons">
-      <a href="/contact" class="btn-primary">Request a Quote</a>
-      <a href="/contact" class="btn-secondary">Book a Call</a>
+      <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+      <a href="/products" class="btn-secondary">See Our Products</a>
     </div>
   </div>
 </section>

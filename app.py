@@ -35,6 +35,22 @@ def solutions():
 def products():
     return render_template("products.html")
 
+@app.route("/products/orvex")
+def product_orvex():
+    return render_template("product_orvex.html")
+
+@app.route("/products/recura")
+def product_recura():
+    return render_template("product_recura.html")
+
+@app.route("/products/cubbo")
+def product_cubbo():
+    return render_template("product_cubbo.html")
+
+@app.route("/capabilities")
+def capabilities():
+    return render_template("capabilities.html")
+
 @app.route("/contact")
 def contact():
     return render_template("contact.html")

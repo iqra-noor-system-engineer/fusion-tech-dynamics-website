@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Cubbo | Fusion Tech Dynamics{% endblock %}
+
+{% block content %}
+<section class="pp-hero">
+  <div class="container pp-hero-grid">
+    <div>
+      <span class="product-status">Prototype in development</span>
+      <h1>Cubbo</h1>
+      <p class="pp-tagline">The friend who talks back.</p>
+      <p class="pp-intro">A screen-free AI talking teddy bear for young children, speaking Urdu and English. Cubbo is a prototype and is not on sale yet.</p>
+      <div class="pp-buttons">
+        <a href="/contact" class="btn-primary">Follow Cubbo's Progress</a>
+        <a href="/products" class="btn-secondary">All Products</a>
+      </div>
+    </div>
+    <div>
+      <img src="{{ url_for('static', filename='images/products/cubbo-brand.webp') }}" alt="Cubbo name with its tagline in English and Urdu">
+      <span class="pp-caption">Cubbo is a working name.</span>
+    </div>
+  </div>
+</section>
+
+<section class="pp-dark">
+  <div class="container">
+    <span class="section-kicker">The idea</span>
+    <h2>Play and learning, without another screen.</h2>
+    <p>Many parents want to limit screen time, and few talking toys speak Urdu. Cubbo gives children something to talk to in the language they use at home.</p>
+  </div>
+</section>
+
+<section class="section-light">
+  <div class="container">
+    <span class="light-kicker">What Cubbo does</span>
+    <h2>A conversation, a story, a new word</h2>
+    <p class="light-intro">Children speak to Cubbo and it answers aloud, in Urdu or English.</p>
+    <div class="light-grid">
+      <div class="light-card"><strong>01</strong><h3>Talks</h3><p>Holds a spoken conversation, with no screen for the child to look at.</p></div>
+      <div class="light-card"><strong>02</strong><h3>Plays &amp; teaches</h3><p>Tells stories, sings rhymes, practises counting and the alphabet, and teaches a new word each day.</p></div>
+      <div class="light-card"><strong>03</strong><h3>Answers to parents</h3><p>Parents choose the language and set daily time limits from an app.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container"><h2>Interested in Cubbo?</h2><a href="/contact" class="btn-primary">Talk to Our Team</a></div>
+</section>
+{% endblock %}
