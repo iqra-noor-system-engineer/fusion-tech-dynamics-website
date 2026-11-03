@@ -4985,51 +4985,63 @@ main {
   }
 }
 
-/* Homepage client work */
+/* Homepage engineering services */
 .home-clients {
-  background: linear-gradient(180deg, #07101f 0%, #0b1730 100%);
+  background: #0b1730;
 }
 
 .home-clients-head {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  align-items: end;
-  gap: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 48px;
   margin-bottom: 40px;
 }
 
+.home-clients-head > div {
+  max-width: 760px;
+}
+
 .home-clients-head h2 {
-  margin: 8px 0 0;
-  font-size: clamp(2rem, 3.6vw, 2.9rem);
-  line-height: 1.12;
+  margin: 10px 0 14px;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.14;
 }
 
 .home-clients-head p {
-  margin: 0 0 20px;
+  margin: 0;
   color: #b4c1d6;
   font-size: 1.05rem;
   line-height: 1.65;
 }
 
+.home-clients-head .btn-secondary {
+  flex: none;
+}
+
 .home-caps {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 20px;
 }
 
 .home-cap {
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
   color: #ffffff;
   text-decoration: none;
   background: #0f1b31;
   border: 1px solid rgba(125, 161, 207, .18);
-  border-radius: 16px;
+  border-radius: 14px;
 }
 
-.home-cap img {
+.home-cap-media {
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.home-cap-media img {
   display: block;
   width: 100%;
   height: 100%;
@@ -5037,44 +5049,27 @@ main {
   transition: transform .7s ease;
 }
 
-.home-cap::after {
-  position: absolute;
-  inset: 0;
-  content: "";
-  background: linear-gradient(180deg, rgba(5, 12, 27, .05) 25%, rgba(5, 12, 27, .94) 82%);
-}
-
 .home-cap-body {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 20px 22px;
-}
-
-.home-cap-body span {
-  color: #22d3ee;
-  font-size: .82rem;
-  font-weight: 700;
+  flex: 1;
+  padding: 18px 20px 20px;
 }
 
 .home-cap-body h3 {
-  margin: 4px 0 6px;
+  margin: 0 0 6px;
   color: #ffffff;
-  font-size: 1.3rem;
+  font-size: 1.18rem;
 }
 
 .home-cap-body p {
   margin: 0;
-  color: #d3deef;
+  color: #aebbd0;
   font-size: .93rem;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 @media (hover: hover) {
-  .home-cap:hover img {
-    transform: scale(1.06);
+  .home-cap:hover .home-cap-media img {
+    transform: scale(1.05);
   }
 
   .home-cap:hover {
@@ -5083,7 +5078,8 @@ main {
 }
 
 @media (max-width: 900px) {
-  .home-clients-head { grid-template-columns: 1fr; gap: 16px; }
+  .home-clients-head { display: block; }
+  .home-clients-head .btn-secondary { display: inline-block; margin-top: 20px; }
   .home-caps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
@@ -5092,5 +5088,5 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .home-cap img { transition: none; }
+  .home-cap-media img { transition: none; }
 }
