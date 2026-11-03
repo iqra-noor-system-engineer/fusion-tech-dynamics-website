@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="/static/css/styles.css?v=a5d671294362">
+  <link rel="stylesheet" href="/static/css/styles.css?v=cf103742a68b">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -67,37 +67,89 @@
 
   <main>
 
-<section class="home-hero">
-  <div class="container">
-    <div class="home-hero-head">
-      <div>
+<section class="hs" id="heroSlider" aria-roledescription="carousel" aria-label="Fusion Tech Dynamics and our products">
+  <div class="hs-slide is-active" aria-roledescription="slide" aria-label="1 of 4">
+    <div class="hs-bg" style="background-image:url('/static/images/hero/company.webp')"></div>
+    <div class="hs-content">
+      <div class="hs-copy">
+        <span class="hs-eyebrow">Hardware, AI and software as one team</span>
         <h1>Engineering Intelligence into Every System</h1>
-        <p>We design and build hardware, AI and software as one team in Islamabad. Here's what we're building now.</p>
+        <p>We design, build and test complete systems in Islamabad, from a CAD model to a deployed product.</p>
+        <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
       </div>
-      <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
     </div>
+  </div>
+  <div class="hs-slide" aria-roledescription="slide" aria-label="2 of 4">
+    <div class="hs-bg" style="background-image:url('/static/images/hero/orvex.webp')"></div>
+    <div class="hs-content">
+      <div class="hs-copy">
+        <span class="hs-eyebrow">Orvex &middot; AI video intelligence</span>
+        <h2>Cameras see. Orvex understands.</h2>
+        <p>Connects the cameras a site already has into one live map, and follows one person across them as a single incident.</p>
+        <a href="/products/orvex" class="btn-primary">Explore Orvex</a>
+      </div>
+    </div>
+    <span class="hs-note">Illustrative image.</span>
+  </div>
+  <div class="hs-slide hs-slide-solid" aria-roledescription="slide" aria-label="3 of 4">
+    <div class="hs-bg" style="background-image:url('/static/images/hero/recura.webp')"></div>
+    <div class="hs-content">
+      <div class="hs-copy">
+        <span class="hs-eyebrow">ReCura &middot; Connected healthcare</span>
+        <h2>Private patient tracking between visits.</h2>
+        <p>A connected doctor and patient platform, now in a live dermatology pilot, with patient records encrypted before upload.</p>
+        <a href="/products/recura" class="btn-primary">Explore ReCura</a>
+      </div>
+    </div>
+    <span class="hs-note">ReCura interface, shown with sample data.</span>
+  </div>
+  <div class="hs-slide hs-slide-warm" aria-roledescription="slide" aria-label="4 of 4">
+    <div class="hs-bg" style="background-image:url('/static/images/hero/cubbo.webp')"></div>
+    <div class="hs-content">
+      <div class="hs-copy">
+        <span class="hs-eyebrow">Cubbo &middot; Screen-free AI toy</span>
+        <h2>The friend who talks back.</h2>
+        <p>A talking teddy bear for young children, speaking Urdu and English. Cubbo is a prototype and is not on sale yet.</p>
+        <a href="/products/cubbo" class="btn-primary">Explore Cubbo</a>
+      </div>
+    </div>
+  </div>
+  <button class="hs-arrow hs-prev" type="button" aria-label="Previous slide"><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+  <button class="hs-arrow hs-next" type="button" aria-label="Next slide"><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
+  <div class="hs-controls">
+    <button class="hs-dot is-active" type="button" aria-label="Go to slide 1"></button>
+    <button class="hs-dot" type="button" aria-label="Go to slide 2"></button>
+    <button class="hs-dot" type="button" aria-label="Go to slide 3"></button>
+    <button class="hs-dot" type="button" aria-label="Go to slide 4"></button>
+    <button class="hs-pause" type="button" aria-label="Pause slideshow"><i class="fas fa-pause" aria-hidden="true"></i></button>
+  </div>
+</section>
+
+<section class="home-section home-products-section">
+  <div class="container">
+    <h2>What we're building now</h2>
     <div class="home-products">
       <a class="home-product" href="/products/orvex">
-        <img src="/static/images/products/orvex-connected-video.webp" alt="Six camera feeds following one person from the main gate to the exit">
+        <img src="/static/images/products/orvex-connected-video.webp" alt="Six camera feeds following one person from the main gate to the exit" loading="lazy">
         <div class="home-product-body">
           <span class="product-status">AI video intelligence</span>
-          <h2>Orvex</h2>
+          <h3>Orvex</h3>
           <p>Connects the cameras a site already has into one live map.</p>
         </div>
       </a>
       <a class="home-product" href="/products/recura">
-        <img src="/static/images/products/recura-treatment-response.webp" alt="ReCura treatment response chart and visit record, shown with sample data">
+        <img src="/static/images/products/recura-treatment-response.webp" alt="ReCura treatment response chart and visit record, shown with sample data" loading="lazy">
         <div class="home-product-body">
           <span class="product-status">Connected healthcare</span>
-          <h2>ReCura</h2>
+          <h3>ReCura</h3>
           <p>Private patient tracking between visits, in a live dermatology pilot.</p>
         </div>
       </a>
       <a class="home-product" href="/products/cubbo">
-        <img src="/static/images/products/cubbo-brand.webp" alt="Cubbo name with its tagline in English and Urdu">
+        <img src="/static/images/products/cubbo-brand.webp" alt="Cubbo name with its tagline in English and Urdu" loading="lazy">
         <div class="home-product-body">
           <span class="product-status">Screen-free AI toy</span>
-          <h2>Cubbo</h2>
+          <h3>Cubbo</h3>
           <p>A talking teddy bear for young children, in Urdu and English.</p>
         </div>
       </a>
@@ -210,6 +262,6 @@
   </div>
 </footer>
 
-  <script src="/static/js/script.js?v=a5d671294362"></script>
+  <script src="/static/js/script.js?v=cf103742a68b"></script>
 </body>
 </html>

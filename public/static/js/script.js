@@ -306,3 +306,114 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Homepage: full-screen hero slider and product card entrance.
+document.addEventListener("DOMContentLoaded", () => {
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const cards = document.querySelector(".home-products");
+  if (cards && !reduceMotion) {
+    cards.classList.add("is-waiting");
+    const cardObserver = new IntersectionObserver(entries => {
+      if (!entries[0].isIntersecting) return;
+      cards.classList.remove("is-waiting");
+      cards.classList.add("is-in");
+      cardObserver.disconnect();
+    }, { threshold: 0.1 });
+    cardObserver.observe(cards);
+  }
+
+  const slider = document.getElementById("heroSlider");
+  if (!slider) return;
+
+  const slides = [...slider.querySelectorAll(".hs-slide")];
+  const dots = [...slider.querySelectorAll(".hs-dot")];
+  const pauseButton = slider.querySelector(".hs-pause");
+  const moveTime = reduceMotion ? 0 : 900;
+  let current = 0;
+  let moving = false;
+  let timer = null;
+  let userPaused = reduceMotion;
+  let hovering = false;
+
+  const setHidden = (slide, hidden) => {
+    slide.inert = hidden;
+    slide.setAttribute("aria-hidden", hidden ? "true" : "false");
+  };
+
+  slides.forEach((slide, i) => setHidden(slide, i !== 0));
+
+  const goTo = (next, direction) => {
+    if (moving || next === current) return;
+    moving = true;
+    const from = slides[current];
+    const to = slides[next];
+
+    to.style.transform = `translateX(${direction * 100}%)`;
+    to.getBoundingClientRect();
+    from.classList.add("is-moving");
+    to.classList.add("is-moving");
+    from.style.transform = `translateX(${direction * -100}%)`;
+    to.style.transform = "translateX(0)";
+    to.classList.add("is-active");
+    setHidden(to, false);
+    setHidden(from, true);
+    dots[current].classList.remove("is-active");
+    dots[next].classList.add("is-active");
+    current = next;
+
+    setTimeout(() => {
+      from.classList.remove("is-active", "is-moving");
+      to.classList.remove("is-moving");
+      from.style.transform = "";
+      to.style.transform = "";
+      moving = false;
+    }, moveTime);
+  };
+
+  const step = direction => goTo((current + direction + slides.length) % slides.length, direction);
+
+  const stop = () => {
+    clearInterval(timer);
+    timer = null;
+  };
+
+  const start = () => {
+    stop();
+    if (!userPaused && !hovering && !document.hidden) timer = setInterval(() => step(1), 6000);
+  };
+
+  const showPauseState = () => {
+    pauseButton.setAttribute("aria-label", userPaused ? "Play slideshow" : "Pause slideshow");
+    pauseButton.querySelector("i").className = `fas ${userPaused ? "fa-play" : "fa-pause"}`;
+  };
+
+  slider.querySelector(".hs-prev").addEventListener("click", () => { step(-1); start(); });
+  slider.querySelector(".hs-next").addEventListener("click", () => { step(1); start(); });
+  dots.forEach((dot, i) => dot.addEventListener("click", () => { goTo(i, i > current ? 1 : -1); start(); }));
+  pauseButton.addEventListener("click", () => {
+    userPaused = !userPaused;
+    showPauseState();
+    start();
+  });
+
+  slider.addEventListener("mouseenter", () => { hovering = true; start(); });
+  slider.addEventListener("mouseleave", () => { hovering = false; start(); });
+  slider.addEventListener("focusin", () => { hovering = true; start(); });
+  slider.addEventListener("focusout", () => { hovering = false; start(); });
+  document.addEventListener("visibilitychange", start);
+
+  let touchStart = null;
+  slider.addEventListener("touchstart", event => { touchStart = event.touches[0].clientX; }, { passive: true });
+  slider.addEventListener("touchend", event => {
+    if (touchStart === null) return;
+    const distance = event.changedTouches[0].clientX - touchStart;
+    touchStart = null;
+    if (Math.abs(distance) < 50) return;
+    step(distance < 0 ? 1 : -1);
+    start();
+  }, { passive: true });
+
+  showPauseState();
+  start();
+});
