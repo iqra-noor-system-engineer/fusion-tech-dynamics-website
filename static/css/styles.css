@@ -306,7 +306,6 @@ header.navbar {
 
 /* About ---- */
 .about-hero {
-  background: url('../images/about.JPG') no-repeat center center / cover;
   color: #fff; 
   padding: 120px 24px;
   text-align: left;
