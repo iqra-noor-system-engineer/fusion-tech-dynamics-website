@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- scroll reveal (progressive enhancement: only hides once JS runs) ---
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const targets = document.querySelectorAll(
-      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card"
+      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card, .home-section h2, .home-section-intro, .home-steps li, .home-section .btn-secondary, .home-list li, .home-cta .container"
     );
     const ro = new IntersectionObserver(entries => {
       entries.forEach(e => {
