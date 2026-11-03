@@ -131,7 +131,7 @@
         <div class="home-cap-media"><img src="{{ url_for('static', filename='images/services/vision.jpg') }}" alt="Vision processor board held beside a camera lens" loading="lazy"></div>
         <div class="home-cap-body">
           <h3>AI &amp; vision</h3>
-          <p>Computer vision and edge AI, deployed on-device.</p>
+          <p>Computer vision and edge AI that runs on the device.</p>
         </div>
       </a>
       <a class="home-cap" href="/services#software">
@@ -152,25 +152,60 @@
   </div>
 </section>
 
-<section class="home-section">
-  <div class="container home-columns">
-    <div>
-      <h2>Track record</h2>
-      <ul class="home-list">
-        <li><strong>Founded in 2025</strong>By engineers from Pakistan's aerospace, defense and industrial sectors.</li>
-        <li><strong>Our own test rig</strong>An Iron Bird and 3-axis rate-table bench, designed and built in-house.</li>
-        <li><strong>International clients</strong>Engineering and software delivered across borders.</li>
-        <li><strong>Edge AI</strong>Computer-vision systems that run fully on-device.</li>
-      </ul>
+<section class="home-facts">
+  <div class="container home-facts-grid">
+      <div class="home-fact">
+        <i class="fas fa-location-dot" aria-hidden="true"></i>
+        <div><h3>Built in Islamabad</h3><p>Founded in 2025 by aerospace, defense and industrial engineers.</p></div>
+      </div>
+      <div class="home-fact">
+        <i class="fas fa-gauge-high" aria-hidden="true"></i>
+        <div><h3>In-house test rig</h3><p>An Iron Bird and 3-axis rate-table bench, built by our team.</p></div>
+      </div>
+      <div class="home-fact">
+        <i class="fas fa-globe" aria-hidden="true"></i>
+        <div><h3>International clients</h3><p>Engineering and software delivered across borders.</p></div>
+      </div>
+      <div class="home-fact">
+        <i class="fas fa-microchip" aria-hidden="true"></i>
+        <div><h3>On-device AI</h3><p>Computer-vision systems that run fully on-device.</p></div>
+      </div>
+  </div>
+</section>
+
+<section class="home-section home-news">
+  <div class="container">
+    <h2>Latest news</h2>
+    <div class="home-news-grid">
+      <a class="home-news-card" href="/products/orvex">
+        <img src="{{ url_for('static', filename='images/hero/orvex-news.webp') }}" alt="Monitors showing one person tracked across several cameras" loading="lazy">
+        <div class="home-news-body">
+          <span class="news-date">October 2026</span>
+          <h3>Orvex joins WISE Lab Cohort 1</h3>
+          <p>Selected for the first WISE Lab cohort.</p>
+          <span class="home-news-more">Read more &rarr;</span>
+        </div>
+      </a>
+      <a class="home-news-card" href="/products/recura">
+        <img src="{{ url_for('static', filename='images/hero/recura-v2.webp') }}" alt="Doctor reviewing a tablet in a dermatology clinic" loading="lazy">
+        <div class="home-news-body">
+          <span class="news-date">October 2026</span>
+          <h3>ReCura is live in a clinic pilot</h3>
+          <p>A practising dermatologist is testing it, and their feedback is shaping new features.</p>
+          <span class="home-news-more">Read more &rarr;</span>
+        </div>
+      </a>
+      <a class="home-news-card" href="/products/cubbo">
+        <img src="{{ url_for('static', filename='images/hero/cubbo-v2.webp') }}" alt="Plush teddy bear sitting beside picture books" loading="lazy">
+        <div class="home-news-body">
+          <span class="news-date">August 2026</span>
+          <h3>Cubbo speaks Urdu and English</h3>
+          <p>Our prototype voice pipeline completed its first end-to-end test.</p>
+          <span class="home-news-more">Read more &rarr;</span>
+        </div>
+      </a>
     </div>
-    <div>
-      <h2>Latest news</h2>
-      <ul class="home-list">
-        <li><span class="news-date">October 2026</span><strong>Orvex joins WISE Lab Cohort 1</strong>Selected for the first WISE Lab cohort. <a href="/products/orvex">About Orvex &rarr;</a></li>
-        <li><span class="news-date">October 2026</span><strong>ReCura is live in a clinic pilot</strong>A practising dermatologist is testing it, and their feedback is shaping new features. <a href="/products/recura">About ReCura &rarr;</a></li>
-        <li><span class="news-date">August 2026</span><strong>Cubbo speaks Urdu and English</strong>Our prototype voice pipeline completed its first end-to-end test. <a href="/products/cubbo">About Cubbo &rarr;</a></li>
-      </ul>
-    </div>
+    <p class="home-news-note">Images are illustrative.</p>
   </div>
 </section>
 
