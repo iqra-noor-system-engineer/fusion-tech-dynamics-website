@@ -6459,3 +6459,40 @@ main {
   .ct-row { grid-template-columns: 1fr; gap: 0; }
   .ct-form button { justify-self: stretch; }
 }
+
+/* Careers page */
+.pv-hero + .cr-section {
+  padding-top: 72px;
+}
+
+.cr-hero-btn {
+  display: inline-block;
+}
+
+.cr-section .section-kicker {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cr-intro {
+  max-width: 720px;
+  margin: -6px 0 26px;
+  color: #b4c1d6;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.cr-intro a {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.cr-apply-text {
+  margin: 0 0 24px;
+  color: #e6eefb;
+  line-height: 1.6;
+}
+
+#apply {
+  scroll-margin-top: 70px;
+}

@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="/static/css/styles.css?v=4a61cfeaca30">
+  <link rel="stylesheet" href="/static/css/styles.css?v=b0f91a62fb26">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -67,111 +67,123 @@
 
   <main>
 
-<section class="page-hero careers-hero">
-  <div class="hero-overlay">
-    <h1>Careers</h1>
-    <p>Join Fusion Tech Dynamics and Help Engineer the Future</p>
+<section class="pv-hero ct-hero" style="--pv-img:url('/static/images/hero/careers-hero.webp')">
+  <div class="container">
+    <span class="pv-status">Careers</span>
+    <h1>Help us engineer real systems.</h1>
+    <p class="pv-intro">Work across hardware, AI and software, on our own products and on systems we build for clients.</p>
+    <a href="#apply" class="btn-primary cr-hero-btn">Apply Now</a>
   </div>
+  <span class="hs-note">Illustrative image.</span>
 </section>
 
-<section class="careers-section">
+<section class="ab-cards-section cr-section">
   <div class="container">
-    <h2>Why Work With Us?</h2>
-    <p>We are a forward-thinking team focused on innovation, collaboration, and solving real-world engineering challenges.</p>
-
-    <div class="job-listings">
-      <div class="job-card">
-        <h3>Embedded Systems Engineer</h3>
-        <p>Experience with C/C++, RTOS, and microcontroller development. Design and implement embedded hardware/software systems.</p>
-      </div>
-
-      <div class="job-card">
-        <h3>Machine Learning Engineer</h3>
-        <p>Develop and deploy ML models for predictive maintenance, data analytics, and intelligent automation systems.</p>
-      </div>
-
-      <div class="job-card">
-        <h3>Systems Engineer (R&D)</h3>
-        <p>Lead system architecture, requirement analysis, and model-based design for aerospace and autonomous systems.</p>
-      </div>
-    </div>
-
-    <div class="cta-banner">
-      <h2>Think You’re a Good Fit?</h2>
-      <a href="/contact" class="btn-primary">Apply Now</a>
+    <h2>Why work with us</h2>
+    <div class="ab-cards">
+      <article class="ab-card"><h3>Real products</h3><p>Work on systems we are building ourselves, including Orvex, ReCura and Cubbo, as well as client projects.</p></article>
+      <article class="ab-card ab-card-accent"><h3>Across disciplines</h3><p>See how hardware, embedded software, AI and applications come together in one system.</p></article>
+      <article class="ab-card"><h3>Tested work</h3><p>Solve real-world engineering problems, and test what you build before it reaches anyone.</p></article>
     </div>
   </div>
 </section>
 
-<section class="career-growth fade-on-scroll">
+<section class="ab-cards-section cr-section">
   <div class="container">
-    <h2>Internships & Training Programs</h2>
-    <p>At Fusion Tech Dynamics, we offer immersive internships and hands-on technical training to help the next generation of engineers gain real-world experience.</p>
-
-    <div class="training-grid">
-      <div class="training-card">
-        <h4>Embedded Systems Internship</h4>
-        <p>Work alongside our engineering team to develop and test embedded solutions using real-time platforms and microcontrollers.</p>
-      </div>
-
-      <div class="training-card">
-        <h4>AI/ML Training Program</h4>
-        <p>Build intelligent systems using supervised, unsupervised learning and real-world sensor datasets in our lab environment.</p>
-      </div>
-
-      <div class="training-card">
-        <h4>Systems Engineering Bootcamp</h4>
-        <p>Get trained on model-based design, simulation, requirement validation, and system integration techniques.</p>
-      </div>
+    <span class="section-kicker">Roles</span>
+    <h2>Who we look for</h2>
+    <p class="cr-intro">Openings change as our projects do. If your experience fits, apply and tell us what you'd like to work on.</p>
+    <div class="ab-cards">
+      <article class="ab-card"><h3>Embedded Systems Engineer</h3><p>Experience with C/C++, RTOS and microcontroller development. Design and implement embedded hardware and software.</p></article>
+      <article class="ab-card"><h3>Machine Learning Engineer</h3><p>Develop and deploy ML models for data analytics, predictive maintenance and intelligent automation.</p></article>
+      <article class="ab-card"><h3>Systems Engineer (R&amp;D)</h3><p>Lead system architecture, requirements analysis and model-based design for aerospace and autonomous systems.</p></article>
     </div>
   </div>
 </section>
 
-<section class="internship-form-section fade-on-scroll">
+<section class="ab-cards-section cr-section">
   <div class="container">
-    <h2>Apply for Internship</h2>
-    <form
-      method="post"
-      action="https://formsubmit.co/ajax/contact@fusiontechdynamics.com"
-      class="internship-form"
-      data-secure-form
-      data-success-message="Thank you — your internship application has been sent successfully.">
-      <input type="hidden" name="_subject" value="New internship application from the Fusion Tech Dynamics website">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" hidden>
-
-      <label for="intern-name">Full name</label>
-      <input id="intern-name" type="text" name="name" placeholder="Your Full Name" autocomplete="name" required>
-
-      <label for="intern-email">Email</label>
-      <input id="intern-email" type="email" name="email" placeholder="Your Email" autocomplete="email" required>
-
-      <label for="intern-university">University or institute</label>
-      <input id="intern-university" type="text" name="university" placeholder="University / Institute" autocomplete="organization" required>
-
-      <label for="intern-field">Preferred field</label>
-      <select id="intern-field" name="field" required>
-        <option value="">Select Field</option>
-        <option value="embedded">Embedded Systems</option>
-        <option value="ai_ml">AI / Machine Learning</option>
-        <option value="systems">Systems Engineering</option>
-      </select>
-
-      <label for="intern-message">Why do you want to join us?</label>
-      <textarea id="intern-message" name="message" rows="4" placeholder="Tell us about your interests and experience" required></textarea>
-
-      <button type="submit" class="btn-primary" data-submit-label="Submit Application">Submit Application</button>
-      <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-      <p class="static-form-note">Your details are used only to review your application.</p>
-    </form>
+    <span class="section-kicker">Internships</span>
+    <h2>Start with hands-on experience</h2>
+    <p class="cr-intro">Internships for students and new graduates who want real-world engineering experience. Looking for a course instead? <a href="/training">See our training</a>.</p>
+    <div class="ab-cards">
+      <article class="ab-card"><h3>Embedded Systems</h3><p>Work alongside our engineers to develop and test embedded solutions on real-time platforms and microcontrollers.</p></article>
+      <article class="ab-card"><h3>AI / Machine Learning</h3><p>Build intelligent systems using supervised and unsupervised learning on real-world sensor data.</p></article>
+      <article class="ab-card"><h3>Systems Engineering</h3><p>Learn model-based design, simulation, requirements validation and system integration.</p></article>
+    </div>
   </div>
 </section>
-
 
   </main>
 
   <div class="ftd-closing">
+
+<section class="home-cta ct-main" id="apply">
+  <div class="container ct-grid">
+    <div class="ct-details">
+      <h2>Think you're a good fit?</h2>
+      <p class="cr-apply-text">Tell us about yourself and what you'd like to work on. You can add a link to your CV or portfolio.</p>
+      <ul class="ct-list">
+        <li><i class="fas fa-envelope" aria-hidden="true"></i><span>Prefer email?</span><a href="mailto:contact@fusiontechdynamics.com">contact@fusiontechdynamics.com</a></li>
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>Location</span><strong>Islamabad, Pakistan</strong></li>
+      </ul>
+    </div>
+
+    <div class="ct-card">
+      <h2>Apply to join us</h2>
+      <form
+        class="ct-form"
+        action="https://formsubmit.co/ajax/contact@fusiontechdynamics.com"
+        method="post"
+        data-secure-form
+        data-success-message="Thank you. Your application has been sent.">
+        <input type="hidden" name="_subject" value="New careers application from the Fusion Tech Dynamics website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" hidden>
+
+        <div class="ct-row">
+          <div>
+            <label for="apply-name">Full name</label>
+            <input id="apply-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="apply-email">Email</label>
+            <input id="apply-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          </div>
+        </div>
+
+        <label for="apply-for">Applying for</label>
+        <select id="apply-for" name="applying_for" required>
+          <option value="">Select one</option>
+          <optgroup label="Roles">
+            <option value="Embedded Systems Engineer">Embedded Systems Engineer</option>
+            <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+            <option value="Systems Engineer (R&amp;D)">Systems Engineer (R&amp;D)</option>
+          </optgroup>
+          <optgroup label="Internships">
+            <option value="Embedded Systems internship">Embedded Systems internship</option>
+            <option value="AI / Machine Learning internship">AI / Machine Learning internship</option>
+            <option value="Systems Engineering internship">Systems Engineering internship</option>
+          </optgroup>
+        </select>
+
+        <label for="apply-org">University or current company</label>
+        <input id="apply-org" type="text" name="university_or_company" placeholder="Where you study or work" autocomplete="organization" required>
+
+        <label for="apply-link">Link to your CV or portfolio (optional)</label>
+        <input id="apply-link" type="url" name="cv_link" placeholder="https://" autocomplete="url">
+
+        <label for="apply-message">Why do you want to join us?</label>
+        <textarea id="apply-message" name="message" placeholder="Tell us about your interests and experience" rows="4" required></textarea>
+
+        <button type="submit" class="btn-primary" data-submit-label="Submit Application">Submit Application</button>
+        <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        <p class="ct-note">Your details are used only to review your application.</p>
+      </form>
+    </div>
+  </div>
+</section>
 
     <footer class="site-footer ftd-footer">
   <div class="ftd-footer-panel">
@@ -225,6 +237,6 @@
 </footer>
   </div>
 
-  <script src="/static/js/script.js?v=4a61cfeaca30"></script>
+  <script src="/static/js/script.js?v=b0f91a62fb26"></script>
 </body>
 </html>
