@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- scroll reveal (progressive enhancement: only hides once JS runs) ---
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     const targets = document.querySelectorAll(
-      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card, .home-section h2, .home-clients-head p, .home-clients-head .btn-secondary, .home-cap, .home-fact, .home-news-card, .ab-card, .ab-intro figure, .ab-intro-grid > div, .ab-panel, .ab-team li, .home-cta-grid > *"
+      ".service-card, .service-band, .product-card, .featured-product, .category-heading > *, .flagship-visual, .flagship-copy, .product-intro-grid > *, .service-intro-grid > *, .process-grid > div, .home-pillar, .testimonial, .engagement-card, .tech-group, .why-card, .expertise-item, .solution-card, .job-card, .case-visual, .case-details, .audience-card, .team-card, .insight-card, .pipeline-step, .milestone-item, .photo-band-copy, .light-card, .home-section h2, .home-clients-head p, .home-clients-head .btn-secondary, .home-cap, .home-fact, .home-news-card, .ab-card, .svc, .ab-intro figure, .ab-intro-grid > div, .ab-panel, .ab-team li, .home-cta-grid > *"
     );
     const ro = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -404,4 +404,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   showPauseState();
   start();
+});
+
+// Services page: open a section when it is linked to directly.
+document.addEventListener("DOMContentLoaded", () => {
+  const openFromHash = () => {
+    const target = location.hash && document.querySelector(`details.svc${location.hash}`);
+    if (!target) return;
+    target.open = true;
+    target.scrollIntoView({ block: "start", behavior: "instant" });
+  };
+  document.querySelectorAll(".svc-pills a").forEach(link => {
+    link.addEventListener("click", () => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) target.open = true;
+    });
+  });
+  window.addEventListener("hashchange", openFromHash);
+  openFromHash();
 });
