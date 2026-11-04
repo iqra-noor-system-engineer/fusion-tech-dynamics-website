@@ -3,60 +3,82 @@
 {% block title %}Orvex | Fusion Tech Dynamics{% endblock %}
 
 {% block content %}
-<section class="pp-hero">
-  <div class="container pp-hero-grid">
-    <div>
-      <span class="product-status">MVP &middot; WISE Lab Cohort 1</span>
-      <h1 class="pp-logo"><img src="{{ url_for('static', filename='images/orvex-logo.png') }}" alt="Orvex"></h1>
-      <p class="pp-tagline">Cameras see. Orvex understands.</p>
-      <p class="pp-intro">AI video intelligence that connects the cameras a site already has into one live picture, so security teams can follow what is happening instead of piecing it together afterwards.</p>
-      <div class="pp-buttons">
-        <a href="/contact" class="btn-primary">Talk to Us About a Pilot</a>
-        <a href="/products" class="btn-secondary">All Products</a>
-      </div>
-    </div>
-    <div>
-      <img src="{{ url_for('static', filename='images/products/orvex-connected-video.webp') }}" alt="Six camera feeds following one person from the main gate to the exit">
-      <span class="pp-caption">Illustrative image.</span>
+<div class="pv pv-orvex">
+<section class="pv-hero" style="--pv-img:url('{{ url_for('static', filename='images/hero/orvex-v2.webp') }}')">
+  <div class="container">
+    <span class="pv-status">MVP &middot; WISE Lab Cohort 1</span>
+    <h1 class="pv-logo-heading"><img class="pv-logo" src="{{ url_for('static', filename='images/orvex-logo.png') }}" alt="Orvex"></h1>
+    <p class="pv-tagline">Cameras see. Orvex understands.</p>
+    <p class="pv-intro">AI video intelligence that connects the cameras a site already has into one live picture, so security teams can follow what is happening instead of piecing it together afterwards.</p>
+    <div class="pp-buttons">
+      <a href="/contact" class="btn-primary">Talk to Us About a Pilot</a>
+      <a href="/products" class="btn-secondary">All Products</a>
     </div>
   </div>
+  <span class="hs-note">Illustrative image.</span>
 </section>
 
-<section class="pp-dark">
-  <div class="container">
-    <span class="section-kicker">The problem</span>
-    <h2>The cameras saw everything. Nobody saw the whole story.</h2>
+<section class="ab-intro pv-problem">
+  <div class="container ab-intro-grid">
+    <div>
+      <span class="section-kicker">The problem</span>
+      <h2>The cameras saw everything. Nobody saw the whole story.</h2>
+    </div>
     <p>One person crossing five cameras can arrive as five separate alerts. Operators watching many feeds have to connect those moments by hand, often after the event.</p>
   </div>
 </section>
 
-<section class="section-light">
+<section class="ab-cards-section">
   <div class="container">
-    <span class="light-kicker">How it works</span>
     <h2>From isolated feeds to connected incidents</h2>
-    <p class="light-intro">Orvex adds an intelligence layer over existing cameras, without replacing them.</p>
-    <div class="light-grid">
-      <div class="light-card"><strong>01</strong><h3>See</h3><p>Everyone on one live map, rather than spread across separate camera views.</p></div>
-      <div class="light-card"><strong>02</strong><h3>Connect</h3><p>The same person across several cameras becomes one incident, not a stream of alerts.</p></div>
-      <div class="light-card"><strong>03</strong><h3>Respond</h3><p>Operators get the right alert with the path, estimated arrival and evidence. They stay in control of every response.</p></div>
+    <div class="ab-cards">
+      <article class="ab-card"><strong class="pv-step">1</strong><h3>See</h3><p>Everyone on one live map, rather than spread across separate camera views.</p></article>
+      <article class="ab-card ab-card-accent"><strong class="pv-step">2</strong><h3>Connect</h3><p>The same person across several cameras becomes one incident, not a stream of alerts.</p></article>
+      <article class="ab-card"><strong class="pv-step">3</strong><h3>Respond</h3><p>Operators get the right alert with the path, estimated arrival and evidence.</p></article>
     </div>
   </div>
 </section>
 
-<section class="pp-dark">
+<section class="cap-feature-section">
+  <div class="container cap-feature">
+    <figure>
+      <img src="{{ url_for('static', filename='images/products/orvex-connected-video.webp') }}" alt="Six camera feeds following one person from the main gate to the exit" loading="lazy">
+      <figcaption>Illustrative image.</figcaption>
+    </figure>
+    <div>
+      <span class="section-kicker">Why Orvex</span>
+      <h2>Built around what a site already owns</h2>
+      <ul class="pv-points">
+        <li><strong>No new cameras</strong> Works with existing CCTV, whatever the brand.</li>
+        <li><strong>On-site</strong> Runs at the site it protects.</li>
+        <li><strong>Faster investigations</strong> Follow a person's path across cameras in one timeline.</li>
+        <li><strong>People decide</strong> Orvex supports operators. It does not act on its own.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pv-others">
   <div class="container">
-    <span class="section-kicker">Why Orvex</span>
-    <h2>Built around what a site already owns</h2>
-    <div class="process-grid">
-      <div><strong>01</strong><h3>No new cameras</h3><p>Works with existing CCTV, whatever the brand.</p></div>
-      <div><strong>02</strong><h3>On-site</h3><p>Runs at the site it protects.</p></div>
-      <div><strong>03</strong><h3>Faster investigations</h3><p>Follow a person's path across cameras in one timeline.</p></div>
-      <div><strong>04</strong><h3>People decide</h3><p>Orvex supports operators. It does not act on its own.</p></div>
+    <h2>Also from Fusion Tech Dynamics</h2>
+    <div class="pv-others-grid">
+      <a href="/products/recura"><span>Connected healthcare</span><strong>ReCura</strong><em>Private patient tracking between visits.</em></a>
+      <a href="/products/cubbo"><span>Screen-free AI toy</span><strong>Cubbo</strong><em>The friend who talks back.</em></a>
     </div>
   </div>
 </section>
+</div>
+{% endblock %}
 
-<section class="cta-banner">
-  <div class="container"><h2>Want to see Orvex on your cameras?</h2><a href="/contact" class="btn-primary">Talk to Our Engineers</a></div>
+{% block closing %}
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>Want to see Orvex on your cameras?</h2>
+    <p>Tell us about your site and talk through a pilot directly with our engineers.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact" class="btn-primary">Talk to Us About a Pilot</a>
+      <a href="/services" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
 </section>
 {% endblock %}

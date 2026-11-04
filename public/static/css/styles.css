@@ -5938,3 +5938,313 @@ main {
   .cap-feature { grid-template-columns: 1fr; gap: 28px; }
   .cap-feature-section { padding-bottom: 60px; }
 }
+
+/* Product pages */
+.pv-orvex { --pv-accent: #22d3ee; --pv-deep: #1d4ed8; --pv-deep2: #1e3a8a; }
+.pv-recura { --pv-accent: #e3c15f; --pv-deep: #2f6b45; --pv-deep2: #1f4a30; }
+.pv-cubbo { --pv-accent: #f7b267; --pv-deep: #c2652f; --pv-deep2: #8a3f22; }
+
+.pv-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 82vh;
+  padding: 120px 0 80px;
+  overflow: hidden;
+  color: #ffffff;
+  background: #07101f;
+}
+
+.pv-hero::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: var(--pv-img) right center / cover no-repeat;
+  transform-origin: right center;
+  animation: ab-drift 16s ease-out both;
+}
+
+.pv-hero::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, rgba(5, 12, 27, .95) 0%, rgba(5, 12, 27, .82) 42%, rgba(5, 12, 27, .16) 70%, rgba(5, 12, 27, 0) 100%);
+}
+
+.pv-hero .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.pv-logo-heading {
+  margin: 0;
+  line-height: 0;
+}
+
+.pv-hero .container > * {
+  max-width: 600px;
+  animation: hs-up .8s ease backwards;
+}
+
+.pv-hero .container > :nth-child(2) { animation-delay: .1s; }
+.pv-hero .container > :nth-child(3) { animation-delay: .2s; }
+.pv-hero .container > :nth-child(4) { animation-delay: .3s; }
+.pv-hero .container > :nth-child(5) { animation-delay: .4s; }
+
+.pv-hero .hs-note {
+  z-index: 1;
+}
+
+.pv-status {
+  display: block;
+  color: var(--pv-accent);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.pv-hero h1 {
+  margin: 12px 0 8px;
+  color: #ffffff;
+  font-size: clamp(3rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -.02em;
+}
+
+.pv-logo {
+  display: block;
+  width: auto;
+  height: 84px;
+  margin: 16px 0 12px;
+}
+
+.pv-tagline {
+  margin: 0 0 14px;
+  color: var(--pv-accent);
+  font-size: clamp(1.25rem, 2.2vw, 1.7rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.pv-intro {
+  margin: 0 0 28px;
+  color: #e6eefb;
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.pv-problem {
+  padding: 88px 0;
+}
+
+.pv .section-kicker {
+  color: var(--pv-accent);
+}
+
+.pv .ab-card-accent {
+  background: linear-gradient(145deg, var(--pv-deep) 0%, var(--pv-deep2) 100%);
+}
+
+.pv .ab-card-accent p {
+  color: #f1f5fb;
+}
+
+.pv-step {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 16px;
+  color: #07101f;
+  font-weight: 800;
+  background: var(--pv-accent);
+  border-radius: 50%;
+  place-items: center;
+}
+
+.pv .cap-feature img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+}
+
+.pv .cap-feature h2 {
+  margin-top: 10px;
+}
+
+.pv-points li {
+  display: block !important;
+}
+
+.pv-points strong {
+  display: block !important;
+  margin-bottom: 3px;
+}
+
+.pv-others {
+  padding: 0 0 96px;
+  color: #f8fafc;
+  background: #07101f;
+}
+
+.pv-others h2 {
+  margin: 0 0 22px;
+  color: #ffffff;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+}
+
+.pv-others-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pv-others a {
+  display: block;
+  padding: 24px 26px;
+  text-decoration: none;
+  background: #0f1b31;
+  border: 1px solid rgba(125, 161, 207, .18);
+  border-radius: 18px;
+  transition: border-color .25s ease;
+}
+
+.pv-others a:hover {
+  border-color: var(--pv-accent);
+}
+
+.pv-others span {
+  display: block;
+  color: #8493ab;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.pv-others strong {
+  display: block;
+  margin: 4px 0;
+  color: #ffffff;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+}
+
+.pv-others em {
+  color: #b4c1d6;
+  font-style: normal;
+}
+
+/* Products overview */
+.pv-overview-hero {
+  padding: 170px 0 56px;
+  color: #ffffff;
+  text-align: center;
+  background: radial-gradient(ellipse at 50% 0%, #17386f 0%, #0b1730 52%, #07101f 100%);
+}
+
+.pv-overview-hero h1 {
+  margin: 12px 0 16px;
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+}
+
+.pv-overview-hero p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #d3deef;
+  font-size: 1.12rem;
+  line-height: 1.65;
+}
+
+.pv-overview {
+  padding: 24px 0 88px;
+  color: #f8fafc;
+  background: #07101f;
+}
+
+.pv-cards {
+  display: grid;
+  gap: 22px;
+}
+
+.pv-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  background: #0f1b31;
+  border: 1px solid rgba(125, 161, 207, .18);
+  border-radius: 24px;
+  transition: border-color .25s ease;
+}
+
+.pv-card:hover {
+  border-color: var(--pv-accent);
+}
+
+.pv-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.pv-card > div {
+  padding: 36px 40px;
+}
+
+.pv-card h2 {
+  margin: 10px 0 8px;
+  color: #ffffff;
+  font-size: clamp(1.9rem, 3vw, 2.5rem);
+}
+
+.pv-card .venture-logo img {
+  width: auto;
+  height: 52px;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.pv-card p {
+  margin: 0 0 14px;
+  color: #b4c1d6;
+  line-height: 1.6;
+}
+
+.pv-card .pv-tagline {
+  color: var(--pv-accent);
+  font-size: 1.15rem;
+}
+
+.pv-more {
+  color: var(--pv-accent);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .pv-hero { min-height: 72vh; }
+  .pv-hero::after { background: rgba(5, 12, 27, .74); }
+  .pv-hero .hs-note { right: 16px; bottom: 16px; left: auto; }
+  .pv-logo { height: 60px; }
+  .pv-problem { padding: 60px 0; }
+  .pv-others { padding-bottom: 64px; }
+  .pv-others-grid { grid-template-columns: 1fr; }
+  .pv-overview-hero { padding: 130px 0 40px; }
+  .pv-card { grid-template-columns: 1fr; }
+  .pv-card img { min-height: 0; height: auto; aspect-ratio: 16 / 10; }
+  .pv-card .venture-logo img { width: auto; height: 46px; aspect-ratio: auto; }
+  .pv-card > div { padding: 24px 22px 26px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pv-hero::before,
+  .pv-hero .container > * { animation: none; }
+}

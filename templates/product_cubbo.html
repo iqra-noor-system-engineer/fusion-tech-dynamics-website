@@ -3,47 +3,82 @@
 {% block title %}Cubbo | Fusion Tech Dynamics{% endblock %}
 
 {% block content %}
-<section class="pp-hero">
-  <div class="container pp-hero-grid">
-    <div>
-      <span class="product-status">Prototype in development</span>
-      <h1>Cubbo</h1>
-      <p class="pp-tagline">The friend who talks back.</p>
-      <p class="pp-intro">A screen-free AI talking teddy bear for young children, speaking Urdu and English. Cubbo is a prototype and is not on sale yet.</p>
-      <div class="pp-buttons">
-        <a href="/contact" class="btn-primary">Follow Cubbo's Progress</a>
-        <a href="/products" class="btn-secondary">All Products</a>
-      </div>
-    </div>
-    <div>
-      <img src="{{ url_for('static', filename='images/products/cubbo-brand.webp') }}" alt="Cubbo name with its tagline in English and Urdu">
-      <span class="pp-caption">Cubbo is a working name.</span>
+<div class="pv pv-cubbo">
+<section class="pv-hero" style="--pv-img:url('{{ url_for('static', filename='images/hero/cubbo-v2.webp') }}')">
+  <div class="container">
+    <span class="pv-status">Prototype in development</span>
+    <h1>Cubbo</h1>
+    <p class="pv-tagline">The friend who talks back.</p>
+    <p class="pv-intro">A screen-free AI talking teddy bear for young children, speaking Urdu and English. Cubbo is a prototype and is not on sale yet.</p>
+    <div class="pp-buttons">
+      <a href="/contact" class="btn-primary">Follow Cubbo's Progress</a>
+      <a href="/products" class="btn-secondary">All Products</a>
     </div>
   </div>
+  <span class="hs-note">Concept image. Cubbo is a prototype.</span>
 </section>
 
-<section class="pp-dark">
-  <div class="container">
-    <span class="section-kicker">The idea</span>
-    <h2>Play and learning, without another screen.</h2>
+<section class="ab-intro pv-problem">
+  <div class="container ab-intro-grid">
+    <div>
+      <span class="section-kicker">The idea</span>
+      <h2>Play and learning, without another screen.</h2>
+    </div>
     <p>Many parents want to limit screen time, and few talking toys speak Urdu. Cubbo gives children something to talk to in the language they use at home.</p>
   </div>
 </section>
 
-<section class="section-light">
+<section class="ab-cards-section">
   <div class="container">
-    <span class="light-kicker">What Cubbo does</span>
     <h2>A conversation, a story, a new word</h2>
-    <p class="light-intro">Children speak to Cubbo and it answers aloud, in Urdu or English.</p>
-    <div class="light-grid">
-      <div class="light-card"><strong>01</strong><h3>Talks</h3><p>Holds a spoken conversation, with no screen for the child to look at.</p></div>
-      <div class="light-card"><strong>02</strong><h3>Plays &amp; teaches</h3><p>Tells stories, sings rhymes, practises counting and the alphabet, and teaches a new word each day.</p></div>
-      <div class="light-card"><strong>03</strong><h3>Answers to parents</h3><p>Parents choose the language and set daily time limits from an app.</p></div>
+    <div class="ab-cards">
+      <article class="ab-card"><strong class="pv-step">1</strong><h3>Talks</h3><p>Holds a spoken conversation, with no screen for the child to look at.</p></article>
+      <article class="ab-card ab-card-accent"><strong class="pv-step">2</strong><h3>Plays &amp; teaches</h3><p>Tells stories, sings rhymes, practises counting and the alphabet, and teaches a new word each day.</p></article>
+      <article class="ab-card"><strong class="pv-step">3</strong><h3>Answers to parents</h3><p>Parents choose the language and set daily time limits from an app.</p></article>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
-  <div class="container"><h2>Interested in Cubbo?</h2><a href="/contact" class="btn-primary">Talk to Our Team</a></div>
+<section class="cap-feature-section">
+  <div class="container cap-feature">
+    <figure>
+      <img src="{{ url_for('static', filename='images/products/cubbo-brand.webp') }}" alt="Cubbo name with its tagline in English and Urdu" loading="lazy">
+      <figcaption>Cubbo is a working name.</figcaption>
+    </figure>
+    <div>
+      <span class="section-kicker">Made for home</span>
+      <h2>Designed around children and parents</h2>
+      <ul class="pv-points">
+        <li><strong>Urdu &amp; English</strong> Speaks both languages, so children can use the one they know.</li>
+        <li><strong>Screen-free</strong> All voice, with nothing to watch or scroll.</li>
+        <li><strong>Parent controls</strong> Language and daily limits are set from an app.</li>
+        <li><strong>Still in development</strong> We are building and testing the prototype before any sale.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pv-others">
+  <div class="container">
+    <h2>Also from Fusion Tech Dynamics</h2>
+    <div class="pv-others-grid">
+      <a href="/products/orvex"><span>AI video intelligence</span><strong>Orvex</strong><em>Cameras see. Orvex understands.</em></a>
+      <a href="/products/recura"><span>Connected healthcare</span><strong>ReCura</strong><em>Private patient tracking between visits.</em></a>
+    </div>
+  </div>
+</section>
+</div>
+{% endblock %}
+
+{% block closing %}
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>Interested in Cubbo?</h2>
+    <p>Tell us what you'd like to know, and we'll keep you updated on its progress.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact" class="btn-primary">Follow Cubbo's Progress</a>
+      <a href="/services" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
 </section>
 {% endblock %}

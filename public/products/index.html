@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="/static/css/styles.css?v=60d9727d713d">
+  <link rel="stylesheet" href="/static/css/styles.css?v=6b0d62a404d0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -67,69 +67,66 @@
 
   <main>
 
-<section class="page-hero products-hero">
-  <div class="hero-overlay">
-    <span class="hero-eyebrow">Our products</span>
+<section class="pv-overview-hero">
+  <div class="container">
+    <span class="section-kicker">Our products</span>
     <h1>What we're building now</h1>
-    <p>Three products we design, build and run ourselves, across hardware, AI and software.</p>
-    <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+    <p>Three products we design and build ourselves, across hardware, AI and software.</p>
   </div>
 </section>
 
-<section class="venture-section" id="building-now">
+<section class="pv-overview" id="building-now">
   <div class="container">
-    <div class="venture-grid">
-      <article class="product-card venture-card" id="orvex">
-        <img src="/static/images/products/orvex-connected-video.webp" alt="Six camera feeds following one person from the main gate to the exit" loading="lazy">
-        <div class="product-card-body">
-          <span class="product-status">MVP &middot; WISE Lab Cohort 1</span>
-          <h3 class="venture-logo"><img src="/static/images/orvex-logo.png" alt="Orvex"></h3>
-          <p class="venture-tagline">Cameras see. Orvex understands.</p>
+    <div class="pv-cards">
+      <a class="pv-card pv-orvex" href="/products/orvex" id="orvex">
+        <img src="/static/images/hero/orvex-news.webp" alt="Monitors showing one person tracked across several cameras" loading="lazy">
+        <div>
+          <span class="pv-status">MVP &middot; WISE Lab Cohort 1</span>
+          <h2 class="venture-logo"><img src="/static/images/orvex-logo.png" alt="Orvex"></h2>
+          <p class="pv-tagline">Cameras see. Orvex understands.</p>
           <p>AI video intelligence that turns isolated camera feeds into one live map, and gives operators the alert, path and evidence to respond.</p>
-          <div class="product-tags"><span>No new cameras</span><span>Any brand</span><span>On-site</span></div>
-          <a href="/products/orvex" class="venture-link">Explore Orvex &rarr;</a>
+          <span class="pv-more">Explore Orvex &rarr;</span>
         </div>
-      </article>
-      <article class="product-card venture-card" id="recura">
-        <img src="/static/images/products/recura-treatment-response.webp" alt="ReCura treatment response chart and visit record, shown with sample data" loading="lazy">
-        <div class="product-card-body">
-          <span class="product-status">Live pilot &middot; Dermatology first</span>
-          <h3>ReCura</h3>
-          <p class="venture-tagline">Private patient tracking between visits.</p>
+      </a>
+      <a class="pv-card pv-recura" href="/products/recura" id="recura">
+        <img src="/static/images/hero/recura-v2.webp" alt="Doctor reviewing a tablet in a dermatology clinic" loading="lazy">
+        <div>
+          <span class="pv-status">Live pilot &middot; Dermatology first</span>
+          <h2>ReCura</h2>
+          <p class="pv-tagline">Private patient tracking between visits.</p>
           <p>A connected doctor and patient platform, starting with aesthetic dermatology, with patient records encrypted before upload.</p>
-          <div class="product-tags"><span>Encrypted records</span><span>On-device AI</span><span>Installable app</span></div>
-          <a href="/products/recura" class="venture-link">Explore ReCura &rarr;</a>
+          <span class="pv-more">Explore ReCura &rarr;</span>
         </div>
-      </article>
-      <article class="product-card venture-card" id="cubbo">
-        <img src="/static/images/products/cubbo-brand.webp" alt="Cubbo name with its tagline in English and Urdu" loading="lazy">
-        <div class="product-card-body">
-          <span class="product-status">Prototype in development</span>
-          <h3>Cubbo</h3>
-          <p class="venture-tagline">The friend who talks back.</p>
+      </a>
+      <a class="pv-card pv-cubbo" href="/products/cubbo" id="cubbo">
+        <img src="/static/images/hero/cubbo-v2.webp" alt="Plush teddy bear sitting beside picture books" loading="lazy">
+        <div>
+          <span class="pv-status">Prototype in development</span>
+          <h2>Cubbo</h2>
+          <p class="pv-tagline">The friend who talks back.</p>
           <p>A screen-free AI talking teddy bear for young children, speaking Urdu and English, with parent controls in an app.</p>
-          <div class="product-tags"><span>Urdu &amp; English</span><span>Screen-free</span><span>Parent controls</span></div>
-          <a href="/products/cubbo" class="venture-link">Explore Cubbo &rarr;</a>
+          <span class="pv-more">Explore Cubbo &rarr;</span>
         </div>
-      </article>
+      </a>
     </div>
-  </div>
-</section>
-
-<section class="section-light">
-  <div class="container">
-    <span class="light-kicker">Beyond our own products</span>
-    <h2>We build for clients too</h2>
-    <p class="light-intro">The same team takes client systems from concept to tested product, across mechanical design, electronics, firmware, AI and software.</p>
-    <div class="pp-buttons">
-      <a href="/capabilities" class="btn-primary">See Our Capabilities</a>
-    </div>
+    <p class="home-news-note">Images are illustrative.</p>
   </div>
 </section>
 
   </main>
 
   <div class="ftd-closing">
+
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>We build for clients too</h2>
+    <p>The same team takes client systems from concept to tested product.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+      <a href="/capabilities" class="btn-secondary">See Our Capabilities</a>
+    </div>
+  </div>
+</section>
 
     <footer class="site-footer ftd-footer">
   <div class="ftd-footer-panel">
@@ -183,6 +180,6 @@
 </footer>
   </div>
 
-  <script src="/static/js/script.js?v=60d9727d713d"></script>
+  <script src="/static/js/script.js?v=6b0d62a404d0"></script>
 </body>
 </html>

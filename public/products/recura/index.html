@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap">
-  <link rel="stylesheet" href="/static/css/styles.css?v=60d9727d713d">
+  <link rel="stylesheet" href="/static/css/styles.css?v=6b0d62a404d0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -67,67 +67,86 @@
 
   <main>
 
-<section class="pp-hero">
-  <div class="container pp-hero-grid">
-    <div>
-      <span class="product-status">Live pilot &middot; Dermatology first</span>
-      <h1>ReCura</h1>
-      <p class="pp-tagline">Private patient tracking between visits.</p>
-      <p class="pp-intro">A connected doctor and patient platform that keeps each patient's treatment history in one place. We are starting with aesthetic dermatology, and designing it to extend to other specialties.</p>
-      <div class="pp-buttons">
-        <a href="/contact" class="btn-primary">Ask for a Demo</a>
-        <a href="/products" class="btn-secondary">All Products</a>
-      </div>
-    </div>
-    <div>
-      <img src="/static/images/products/recura-treatment-response.webp" alt="ReCura treatment response chart and visit record, shown with sample data">
-      <span class="pp-caption">ReCura interface, shown with sample data.</span>
+<div class="pv pv-recura">
+<section class="pv-hero" style="--pv-img:url('/static/images/hero/recura-v2.webp')">
+  <div class="container">
+    <span class="pv-status">Live pilot &middot; Dermatology first</span>
+    <h1>ReCura</h1>
+    <p class="pv-tagline">Private patient tracking between visits.</p>
+    <p class="pv-intro">A connected doctor and patient platform that keeps each patient's treatment history in one place. We are starting with aesthetic dermatology, and designing it to extend to other specialties.</p>
+    <div class="pp-buttons">
+      <a href="/contact" class="btn-primary">Ask for a Demo</a>
+      <a href="/products" class="btn-secondary">All Products</a>
     </div>
   </div>
+  <span class="hs-note">Illustrative image.</span>
 </section>
 
-<section class="pp-dark">
-  <div class="container">
-    <span class="section-kicker">The problem</span>
-    <h2>Care continues after the patient leaves the clinic.</h2>
+<section class="ab-intro pv-problem">
+  <div class="container ab-intro-grid">
+    <div>
+      <span class="section-kicker">The problem</span>
+      <h2>Care continues after the patient leaves the clinic.</h2>
+    </div>
     <p>Treatment photos sit in phone galleries, notes sit on paper, and patients can drift away between sessions. That makes progress harder to see and follow-up easier to miss.</p>
   </div>
 </section>
 
-<section class="section-light">
+<section class="ab-cards-section">
   <div class="container">
-    <span class="light-kicker">How it works</span>
     <h2>One record from first visit to latest session</h2>
-    <p class="light-intro">Each visit adds to a timeline the clinician can review with the patient.</p>
-    <div class="light-grid">
-      <div class="light-card"><strong>01</strong><h3>Record</h3><p>Capture a photo at each visit. On-device analysis measures redness and affected area alongside the clinician's own notes.</p></div>
-      <div class="light-card"><strong>02</strong><h3>Compare</h3><p>See the visit timeline, before-and-after photos and a treatment response chart.</p></div>
-      <div class="light-card"><strong>03</strong><h3>Stay connected</h3><p>Send patients a private photo link by WhatsApp or QR code, and bring back those overdue for a visit.</p></div>
+    <div class="ab-cards">
+      <article class="ab-card"><strong class="pv-step">1</strong><h3>Record</h3><p>Capture a photo at each visit. On-device analysis measures redness and affected area alongside the clinician's own notes.</p></article>
+      <article class="ab-card ab-card-accent"><strong class="pv-step">2</strong><h3>Compare</h3><p>See the visit timeline, before-and-after photos and a treatment response chart.</p></article>
+      <article class="ab-card"><strong class="pv-step">3</strong><h3>Stay connected</h3><p>Send patients a private photo link by WhatsApp or QR code, and bring back those overdue for a visit.</p></article>
     </div>
   </div>
 </section>
 
-<section class="pp-dark">
+<section class="cap-feature-section">
+  <div class="container cap-feature">
+    <figure>
+      <img src="/static/images/products/recura-treatment-response.webp" alt="ReCura treatment response chart and visit record, shown with sample data" loading="lazy">
+      <figcaption>ReCura interface, shown with sample data. Measurements support clinical decisions and are not a diagnosis.</figcaption>
+    </figure>
+    <div>
+      <span class="section-kicker">In the clinic</span>
+      <h2>Built with feedback from a practising dermatologist</h2>
+      <ul class="pv-points">
+        <li><strong>Consent &amp; intake</strong> Digital forms with on-screen signature.</li>
+        <li><strong>Injection mapping</strong> Record sites, products and doses on a reference schematic.</li>
+        <li><strong>Plans &amp; packages</strong> Track sessions, appointments and payments.</li>
+        <li><strong>Privacy by design</strong> Patient names, notes and photos are encrypted on the clinic's device before upload.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pv-others">
   <div class="container">
-    <span class="section-kicker">In the clinic</span>
-    <h2>Built with feedback from a practising dermatologist</h2>
-    <div class="process-grid">
-      <div><strong>01</strong><h3>Consent &amp; intake</h3><p>Digital forms with on-screen signature.</p></div>
-      <div><strong>02</strong><h3>Injection mapping</h3><p>Record sites, products and doses on a reference schematic.</p></div>
-      <div><strong>03</strong><h3>Plans &amp; packages</h3><p>Track sessions, appointments and payments.</p></div>
-      <div><strong>04</strong><h3>Privacy by design</h3><p>Patient names, notes and photos are encrypted on the clinic's device before upload.</p></div>
+    <h2>Also from Fusion Tech Dynamics</h2>
+    <div class="pv-others-grid">
+      <a href="/products/orvex"><span>AI video intelligence</span><strong>Orvex</strong><em>Cameras see. Orvex understands.</em></a>
+      <a href="/products/cubbo"><span>Screen-free AI toy</span><strong>Cubbo</strong><em>The friend who talks back.</em></a>
     </div>
-    <p class="pp-caption">Measurements support clinical decisions and are not a diagnosis.</p>
   </div>
 </section>
-
-<section class="cta-banner">
-  <div class="container"><h2>Run a clinic? See ReCura with your own workflow.</h2><a href="/contact" class="btn-primary">Talk to Our Team</a></div>
-</section>
+</div>
 
   </main>
 
   <div class="ftd-closing">
+
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>Run a clinic? See ReCura with your own workflow.</h2>
+    <p>Ask for a demo and talk it through directly with our team.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact" class="btn-primary">Ask for a Demo</a>
+      <a href="/services" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
+</section>
 
     <footer class="site-footer ftd-footer">
   <div class="ftd-footer-panel">
@@ -181,6 +200,6 @@
 </footer>
   </div>
 
-  <script src="/static/js/script.js?v=60d9727d713d"></script>
+  <script src="/static/js/script.js?v=6b0d62a404d0"></script>
 </body>
 </html>
