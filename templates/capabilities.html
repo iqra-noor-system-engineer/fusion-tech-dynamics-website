@@ -3,184 +3,88 @@
 {% block title %}Capabilities | Fusion Tech Dynamics{% endblock %}
 
 {% block content %}
-<section class="page-hero products-hero">
-  <div class="hero-overlay">
-    <span class="hero-eyebrow">What our team can engineer</span>
-    <h1>Engineering Capabilities</h1>
-    <p>Mechanical design, electronics, embedded software, AI, cloud applications, test and validation — delivered as one integrated product.</p>
+<section class="ab-hero svc-hero" style="--ab-hero-img:url('{{ url_for('static', filename='images/hero/capabilities-hero.webp') }}')">
+  <div class="container">
+    <span class="section-kicker">Engineering capabilities</span>
+    <h1>What our team can design, build and prove.</h1>
+    <p>From test rigs we run ourselves to concepts that show the range of systems we can engineer for you.</p>
     <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
   </div>
 </section>
 
-<section class="capability-bar">
-  <div class="container capability-grid">
-    <div><strong>Up to 8 layers</strong><span>Professional PCB design</span></div>
-    <div><strong>Prototype to DFM</strong><span>Mechanical product engineering</span></div>
-    <div><strong>Edge to cloud</strong><span>AI, embedded Linux &amp; IoT</span></div>
-    <div><strong>Test with evidence</strong><span>HIL, SIL &amp; rate-table V&amp;V</span></div>
-  </div>
-</section>
-
-<section class="product-intro">
-  <div class="container product-intro-grid">
+<section class="cap-feature-section" id="aerospace-test-products">
+  <div class="container cap-feature" id="three-axis-rate-table">
+    <figure>
+      <img src="{{ url_for('static', filename='images/products/three-axis-uav-rate-table-v3.webp') }}" alt="Three-axis UAV rate table holding a small quadcopter" loading="lazy">
+      <figcaption>Illustrative image.</figcaption>
+    </figure>
     <div>
-      <span class="section-kicker">Product engineering</span>
-      <h2>Rapid prototyping is where disciplines become one product.</h2>
-    </div>
-    <p>The concepts and platforms below show the kinds of systems we can design and build for you. Most are concepts or development platforms, and each card shows its status. We do not stop at a PCB, enclosure, model, or dashboard. Our team combines industrial and mechanical design, injection-moulding readiness, electronics, firmware, AI, applications and verification to build complete systems that can be demonstrated, tested and prepared for manufacture.</p>
-  </div>
-</section>
-
-<section class="product-category" id="consumer-products">
-  <div class="container">
-    <div class="category-heading">
-      <div><span class="section-kicker">Consumer &amp; assistive technology</span><h2>Human-centred connected products</h2></div>
-      <p>Useful physical products shaped around comfort, safety, battery life and simple everyday interaction.</p>
-    </div>
-    <div class="product-grid">
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/premium-tasbeeh-counter-v2.webp') }}" alt="Small screenless haptic Tasbeeh necklace and finger counter concept" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Wearable product concept</span><h3>Premium Haptic Tasbeeh</h3><p>A small screenless necklace counter with one tactile control, silent haptic feedback and an optional finger-worn companion.</p><div class="product-tags"><span>Wearable embedded</span><span>Haptics</span><span>BLE optional</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/baby-car-safety-cushion-v2.webp') }}" alt="Low-profile baby car-seat comfort and sensing cushion concept" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Comfort &amp; sensing concept</span><h3>Low-Profile Baby Car Cushion</h3><p>A thin breathable insert with modest head support, pressure and temperature alerts, and a washable cover. Final use requires certified restraint-system testing.</p><div class="product-tags"><span>Soft goods</span><span>Sensors</span><span>Safety validation</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/smart-gate-security-system.webp') }}" alt="AI smart gate security system" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Integrated system</span><h3>AI Smart Gate Security</h3><p>Edge-based visitor, vehicle and access monitoring with configurable alerts, local recording, intercom integration and a secure management dashboard.</p><div class="product-tags"><span>Computer vision</span><span>Edge AI</span><span>Access control</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="product-category product-category-alt" id="iot-products">
-  <div class="container">
-    <div class="category-heading">
-      <div><span class="section-kicker">IoT &amp; enterprise platforms</span><h2>Connected operations, from sensor to screen</h2></div>
-      <p>Purpose-built hardware and software for monitoring, automation, learning and asset control.</p>
-    </div>
-    <div class="product-grid">
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/embedded-controller-family.webp') }}" alt="ESP32 STM32 and embedded Linux controller products" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Embedded controller family</span><h3>Custom ESP32, STM32 &amp; Linux Controllers</h3><p>Production-focused controller hardware for sensing, motor control, gateways and connected equipment, with firmware, enclosures and test support.</p><div class="product-tags"><span>ESP32</span><span>STM32</span><span>Embedded Linux</span></div></div>
-      </article>
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/esp32-smart-gardening-v2.webp') }}" alt="ESP32 gardening controller with 12 volt pump drip lines sensors and mobile schedule" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Connected irrigation product</span><h3>ESP32 Smart Gardening System</h3><p>Soil sensing, app control and weekly schedules for a small 12 V pump, reservoir and drip lines.</p><div class="product-tags"><span>ESP32</span><span>12 V pump</span><span>App scheduling</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/company-lms-platform.webp') }}" alt="Company learning management system" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Enterprise software</span><h3>Company Learning Management System</h3><p>A branded learning platform for onboarding, technical training, assessments, certification, compliance records and team progress reporting.</p><div class="product-tags"><span>LMS</span><span>Assessments</span><span>Reporting</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/battery-management-system-v2.webp') }}" alt="Compact battery management system prototype" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Embedded power product</span><h3>Battery Management &amp; Telemetry</h3><p>A compact BMS module for cell monitoring, protection, state estimation, CAN communication and maintenance logging — packaged as a clean, serviceable electronics unit.</p><div class="product-tags"><span>BMS</span><span>CAN</span><span>Embedded telemetry</span></div></div>
-      </article>
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/scada-plc-control-panel.webp') }}" alt="Compact SCADA PLC and HMI control panel" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Industrial automation product</span><h3>Compact SCADA &amp; PLC Control Panel</h3><p>A production-ready control cabinet with PLC, safety I/O, motor control, HMI, alarms and trend monitoring for pumps, process skids, greenhouses and small industrial machines.</p><div class="product-tags"><span>PLC</span><span>SCADA / HMI</span><span>Industrial control</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="product-category" id="robotics-products">
-  <div class="container">
-    <div class="category-heading">
-      <div><span class="section-kicker">Robotics &amp; machine development</span><h2>Practical machines built around the task</h2></div>
-      <p>Compact robotic products with real mechanics, embedded control and safety provisions.</p>
-    </div>
-    <div class="product-grid product-grid-two">
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/robotic-massage-gantry-v2.webp', v='20260805-image-fix') }}" alt="Remote-controlled robotic percussion massage gantry prototype" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Robotic mechanism prototype</span><h3>Remote-Controlled Massage Gantry</h3><p>A mobile linear gantry that positions a percussion head with adjustable travel, remote control and emergency stop.</p><div class="product-tags"><span>Motion control</span><span>Remote operation</span><span>Safety I/O</span></div></div>
-      </article>
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/scara-engraving-cell.webp') }}" alt="Compact SCARA robot cell engraving a wooden panel" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Compact automation cell</span><h3>SCARA Engraving Robot</h3><p>A guarded benchtop SCARA cell for repeatable wood and light-material engraving with fixture control and safe operation.</p><div class="product-tags"><span>SCARA</span><span>Engraving</span><span>Machine control</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="product-category" id="ai-rf-products">
-  <div class="container">
-    <div class="category-heading">
-      <div><span class="section-kicker">AI, RF &amp; situational awareness</span><h2>Actionable intelligence at the edge</h2></div>
-      <p>Multi-sensor products that detect, classify and present evidence while keeping a human in control of response decisions.</p>
-    </div>
-    <div class="product-grid">
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/rf-vision-drone-detection.webp') }}" alt="RF and vision based drone detection station" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Defence &amp; infrastructure concept</span><h3>RF + Vision Drone Detection</h3><p>A passive detection station combining RF spectrum analysis, daylight or thermal vision and sensor fusion to identify and track small unmanned aircraft.</p><div class="product-tags"><span>SDR</span><span>Computer vision</span><span>Sensor fusion</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/ai-incident-intelligence.webp') }}" alt="AI incident intelligence and response dashboard" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Responsible AI concept</span><h3>AI Incident Intelligence</h3><p>OpenCV-based event detection with an LLM-assisted operator summary, evidence timeline and configurable response workflow. Designed for human review, privacy controls and accountable action.</p><div class="product-tags"><span>OpenCV</span><span>LLM</span><span>Human-in-the-loop</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/rf-interference-monitor.webp') }}" alt="Authorized RF interference test and monitoring equipment" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Authorized environments only</span><h3>RF Interference Test &amp; Monitoring Kit</h3><p>A low-cost, shielded-lab platform for lawful coexistence testing, spectrum observation and controlled Wi-Fi/Bluetooth resilience experiments — not for disrupting public communications.</p><div class="product-tags"><span>RF engineering</span><span>SDR</span><span>Compliance testing</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="product-category product-category-alt" id="aerospace-test-products">
-  <div class="container">
-    <div class="category-heading">
-      <div><span class="section-kicker">Aerospace engineering products</span><h2>Flight-control integration with evidence</h2></div>
-      <p>Focused tools for avionics configuration, autopilot integration and repeatable ground testing.</p>
-    </div>
-    <div class="product-grid product-grid-two">
-      <article class="product-card product-card-featured">
-        <img src="{{ url_for('static', filename='images/products/px4-autopilot-hil-bench.webp') }}" alt="PX4 and ArduPilot hardware in the loop simulation bench" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Autopilot development platform</span><h3>PX4 / ArduPilot HIL Bench</h3><p>A safe bench for autopilot, sensor, interface and motor-load simulation before flight testing.</p><div class="product-tags"><span>PX4</span><span>ArduPilot</span><span>HIL / SIL</span></div></div>
-      </article>
-      <article class="product-card">
-        <img src="{{ url_for('static', filename='images/products/aerospace-configuration-management-v2.webp') }}" alt="Aerospace equipment and electronics configuration management platform" loading="lazy">
-        <div class="product-card-body"><span class="product-status">Aerospace software</span><h3>Aerospace Configuration Management</h3><p>Track avionics hardware, firmware, calibrations, documents and approved engineering changes.</p><div class="product-tags"><span>Configuration control</span><span>Avionics assets</span><span>Audit trail</span></div></div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="flagship-product" id="three-axis-rate-table">
-  <div class="container flagship-grid">
-    <div class="flagship-visual">
-      <img src="{{ url_for('static', filename='images/products/three-axis-uav-rate-table-v3.webp', v='20260805-image-fix') }}" alt="Three-axis UAV flight rate table with a quadcopter secured to a central mounting fixture" loading="lazy">
-      <span class="image-caption">Three-axis UAV motion-test platform concept</span>
-    </div>
-    <div class="flagship-copy">
-      <span class="pillar-badge">Aerospace test platform</span>
+      <span class="cap-built">Built in-house</span>
       <h2>Three-Axis UAV Rate Table</h2>
-      <p>A floor-standing motion platform for controlled roll, pitch and yaw testing of UAV autopilots, IMUs and flight-control software.</p>
-      <table class="spec-table">
-        <tr><td>Motion</td><td>Independent roll, pitch and yaw axes</td></tr>
-        <tr><td>Test article</td><td>Quadcopter, fixed-wing avionics tray or sensor payload</td></tr>
-        <tr><td>Control</td><td>Programmable profiles, limits and emergency stop</td></tr>
-        <tr><td>Use</td><td>IMU characterization, autopilot tuning and HIL validation</td></tr>
-      </table>
-      <a href="/contact" class="btn-primary">Plan a Test Platform</a>
+      <p>Our own floor-standing motion platform for controlled roll, pitch and yaw testing of UAV autopilots, IMUs and flight-control software.</p>
+      <ul>
+        <li><strong>Motion</strong> Independent roll, pitch and yaw axes</li>
+        <li><strong>Test article</strong> Quadcopter, fixed-wing avionics tray or sensor payload</li>
+        <li><strong>Control</strong> Programmable profiles, limits and emergency stop</li>
+        <li><strong>Use</strong> IMU characterization, autopilot tuning and HIL validation</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="product-process">
+<section class="home-section cap-concepts">
   <div class="container">
-    <span class="section-kicker">How we develop products</span>
-    <h2 class="section-title">One accountable path from idea to validated prototype</h2>
-    <div class="process-grid">
-      <div><strong>01</strong><h3>Discover</h3><p>Use cases, constraints, risks and product requirements.</p></div>
-      <div><strong>02</strong><h3>Design</h3><p>Mechanical, electronics, firmware, AI and interface architecture.</p></div>
-      <div><strong>03</strong><h3>Prototype</h3><p>Rapid fabrication, integration and realistic user evaluation.</p></div>
-      <div><strong>04</strong><h3>Validate</h3><p>Functional, environmental, safety and production-readiness testing.</p></div>
+    <span class="section-kicker">What we can build for you</span>
+    <h2>Example systems</h2>
+    <p class="home-section-intro">These concepts show the kinds of systems our team can engineer. They are examples of our capability, not products for sale.</p>
+    <div class="home-caps">
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/px4-autopilot-hil-bench.webp') }}" alt="Small multirotor on an avionics test bench" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Aerospace &middot; Concept</span><h3>PX4 / ArduPilot HIL Bench</h3><p>A bench for testing autopilots, sensors and interfaces before flight.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/aerospace-configuration-management-v2.webp') }}" alt="Configuration management software on a laptop beside avionics hardware" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Aerospace &middot; Concept</span><h3>Configuration Management</h3><p>Track avionics hardware, firmware, calibrations and approved changes.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/embedded-controller-family.webp') }}" alt="Family of embedded controllers and gateways on a bench" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Embedded &middot; Concept</span><h3>Custom Controllers</h3><p>ESP32, STM32 and Linux controllers for sensing, motor control and gateways.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/battery-management-system-v2.webp') }}" alt="Compact battery management module in an open enclosure" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Embedded &middot; Concept</span><h3>Battery Management</h3><p>Cell monitoring, protection, CAN communication and maintenance logging.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/esp32-smart-gardening-v2.webp') }}" alt="ESP32 gardening controller with pump and drip lines" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">IoT &middot; Concept</span><h3>Smart Irrigation</h3><p>Soil sensing, app control and weekly schedules for a small pump system.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/scada-plc-control-panel.webp') }}" alt="Industrial control cabinet with PLC, wiring and an operator screen" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Industrial &middot; Concept</span><h3>SCADA &amp; PLC Panel</h3><p>A control cabinet with PLC, safety I/O, operator screen and alarms.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/scara-engraving-cell.webp') }}" alt="Benchtop SCARA robot cell in a guarded frame" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Robotics &middot; Concept</span><h3>SCARA Engraving Cell</h3><p>A guarded benchtop robot for repeatable engraving with safe operation.</p></div>
+      </div>
+      <div class="home-cap">
+        <div class="home-cap-media"><img src="{{ url_for('static', filename='images/products/company-lms-platform.webp') }}" alt="Learning platform dashboard on a laptop and tablet" loading="lazy"></div>
+        <div class="home-cap-body"><span class="product-status">Software &middot; Concept</span><h3>Learning Platform</h3><p>Branded training, assessments, certification and progress reporting.</p></div>
+      </div>
     </div>
+    <p class="home-news-note">Images are illustrative.</p>
   </div>
 </section>
+{% endblock %}
 
-<section class="cta-banner">
-  <div class="container"><h2>Have a product that needs to become real?</h2><a href="/contact" class="btn-primary">Start Product Discovery</a></div>
+{% block closing %}
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>Have a system that needs to become real?</h2>
+    <p>Tell us what you're building and talk it through directly with our engineers.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact" class="btn-primary">Talk to Our Engineers</a>
+      <a href="/services" class="btn-secondary">See Our Services</a>
+    </div>
+  </div>
 </section>
 {% endblock %}
