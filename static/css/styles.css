@@ -6496,3 +6496,62 @@ main {
 #apply {
   scroll-margin-top: 70px;
 }
+
+/* Training page */
+.pv-overview-hero .cr-hero-btn {
+  margin-top: 26px;
+}
+
+.tr-intro {
+  padding: 72px 0 56px;
+}
+
+.tr-intro .section-kicker {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tr-modes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tr-modes li {
+  padding: 8px 14px;
+  color: #dbe7f8;
+  font-size: .9rem;
+  font-weight: 600;
+  background: #0f1b31;
+  border: 1px solid rgba(125, 161, 207, .24);
+  border-radius: 999px;
+}
+
+.tr-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.tr-card > p {
+  flex: 1;
+}
+
+.tr-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 14px;
+  margin-top: 18px;
+  padding-top: 14px;
+  color: #93c5fd;
+  font-size: .84rem;
+  font-weight: 700;
+  border-top: 1px solid rgba(125, 161, 207, .18);
+}
+
+@media (max-width: 860px) {
+  .tr-intro { padding: 52px 0 36px; }
+}

@@ -3,118 +3,68 @@
 {% block title %}Training &amp; Workshops | Fusion Tech Dynamics{% endblock %}
 
 {% block content %}
-<section class="page-hero training-hero">
-  <div class="hero-overlay">
-    <h1>Training &amp; Workshops</h1>
-    <p>Hands-on, engineer-led training in the tools we use every day — for universities, companies, and professionals.</p>
+<section class="pv-hero ct-hero" style="--pv-img:url('{{ url_for('static', filename='images/hero/training-hero.webp') }}')">
+  <div class="container">
+    <span class="pv-status">Training &amp; workshops</span>
+    <h1>Learn from working engineers.</h1>
+    <p class="pv-intro">Hands-on, engineer-led training in the tools we use every day, for universities, companies and professionals.</p>
+    <a href="/contact?about=training" class="btn-primary cr-hero-btn">Enquire About Training</a>
   </div>
+  <span class="hs-note">Illustrative image.</span>
 </section>
 
-<section class="services-intro">
-  <div class="container">
-    <h2>Learn from a working engineering team</h2>
-    <p>We don't teach theory off slides — we run practical, project-based workshops drawn from real aerospace, embedded, and automation work. Delivered on-site, live online, or as custom corporate programs.</p>
-  </div>
-</section>
-
-<section class="services-section">
-  <div class="container">
-    <h2 class="section-title">Workshops We Run</h2>
-    <div class="services-grid">
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <rect x="14" y="14" width="16" height="16" rx="2" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
-          <g stroke="#60a5fa" stroke-width="2.5"><line x1="22" y1="7" x2="22" y2="14"/><line x1="22" y1="30" x2="22" y2="37"/><line x1="7" y1="22" x2="14" y2="22"/><line x1="30" y1="22" x2="37" y2="22"/><line x1="16" y1="7" x2="16" y2="14"/><line x1="28" y1="7" x2="28" y2="14"/><line x1="16" y1="30" x2="16" y2="37"/><line x1="28" y1="30" x2="28" y2="37"/></g>
-          <circle class="ic-core" cx="22" cy="22" r="3" fill="#22d3ee"/>
-        </svg>
-        <h3>Embedded Systems &amp; Firmware</h3>
-        <p>Microcontroller programming, RTOS, drivers, and real-time design on STM32 &amp; ESP32.</p>
-        <span class="course-meta">Beginner&ndash;Advanced &middot; 2&ndash;5 days</span>
-      </div>
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <g fill="none" stroke="#60a5fa" stroke-width="2.5"><line x1="22" y1="14" x2="12" y2="30"/><line x1="22" y1="14" x2="32" y2="30"/></g>
-          <circle class="ic-nd" cx="22" cy="12" r="4" fill="#60a5fa"/>
-          <circle class="ic-nd" cx="12" cy="32" r="4" fill="#60a5fa" style="animation-delay:.3s"/>
-          <circle class="ic-nd" cx="32" cy="32" r="4" fill="#60a5fa" style="animation-delay:.6s"/>
-        </svg>
-        <h3>Robotics with ROS / ROS2</h3>
-        <p>Nodes, navigation, SLAM, and simulation — building autonomous behaviour from the ground up.</p>
-        <span class="course-meta">Intermediate &middot; 3&ndash;5 days</span>
-      </div>
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <path class="ic-wave" d="M5 22 H12 L15 12 L19 32 L23 16 L27 28 L30 22 H39" fill="none" stroke="#60a5fa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <h3>Hardware-in-the-Loop (HIL) Testing</h3>
-        <p>Building HIL benches, MATLAB/Simulink models, and automated test &amp; data acquisition.</p>
-        <span class="course-meta">Advanced &middot; 2&ndash;4 days</span>
-      </div>
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <rect class="ic-cadbox" x="11" y="11" width="22" height="22" rx="1" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="4 4"/>
-          <g class="ic-corners" fill="#22d3ee"><rect x="7" y="7" width="6" height="6" rx="1"/><rect x="31" y="7" width="6" height="6" rx="1"/><rect x="7" y="31" width="6" height="6" rx="1"/><rect x="31" y="31" width="6" height="6" rx="1"/></g>
-        </svg>
-        <h3>Model-Based Systems Engineering</h3>
-        <p>Requirements, SysML modelling, and V&amp;V workflows in Cameo / Enterprise Architect.</p>
-        <span class="course-meta">Intermediate &middot; 2&ndash;3 days</span>
-      </div>
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <path d="M6 22 Q22 9 38 22 Q22 35 6 22 Z" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
-          <circle cx="22" cy="22" r="6" fill="none" stroke="#22d3ee" stroke-width="2.5"/>
-          <circle class="ic-core" cx="22" cy="22" r="2.5" fill="#22d3ee"/>
-        </svg>
-        <h3>AI &amp; Computer Vision at the Edge</h3>
-        <p>PyTorch, OpenCV, and deploying models on NVIDIA Jetson Orin for real-time inference.</p>
-        <span class="course-meta">Intermediate&ndash;Advanced &middot; 3&ndash;5 days</span>
-      </div>
-
-      <div class="service-card course-card">
-        <svg class="pillar-icon" viewBox="0 0 44 44" aria-hidden="true">
-          <g class="ic-gear">
-            <circle cx="22" cy="22" r="7" fill="none" stroke="#60a5fa" stroke-width="2.5"/>
-            <g stroke="#60a5fa" stroke-width="3" stroke-linecap="round"><line x1="22" y1="6" x2="22" y2="11"/><line x1="22" y1="33" x2="22" y2="38"/><line x1="6" y1="22" x2="11" y2="22"/><line x1="33" y1="22" x2="38" y2="22"/><line x1="10.7" y1="10.7" x2="14.2" y2="14.2"/><line x1="29.8" y1="29.8" x2="33.3" y2="33.3"/><line x1="33.3" y1="10.7" x2="29.8" y2="14.2"/><line x1="14.2" y1="29.8" x2="10.7" y2="33.3"/></g>
-          </g>
-        </svg>
-        <h3>Industrial Automation &amp; PLC</h3>
-        <p>PLC programming, SCADA/HMI, and control fundamentals on Siemens &amp; Allen-Bradley platforms.</p>
-        <span class="course-meta">Beginner&ndash;Intermediate &middot; 3&ndash;5 days</span>
-      </div>
-
+<section class="ab-intro tr-intro">
+  <div class="container ab-intro-grid">
+    <div>
+      <span class="section-kicker">How we teach</span>
+      <h2>Practical, project-based workshops.</h2>
+    </div>
+    <div>
+      <p>Our workshops are drawn from real aerospace, embedded and automation work, so you spend your time building rather than watching slides.</p>
+      <ul class="tr-modes">
+        <li>On-site</li>
+        <li>Live online</li>
+        <li>Custom corporate programs</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="audience-section">
+<section class="ab-cards-section cr-section">
   <div class="container">
-    <h2 class="section-title">Who It's For</h2>
-    <div class="audience-grid">
-      <div class="audience-card">
-        <h3>Universities &amp; Students</h3>
-        <p>Skill-building workshops, final-year project mentoring, and lab / curriculum support.</p>
-      </div>
-      <div class="audience-card">
-        <h3>Companies &amp; Teams</h3>
-        <p>Upskill your engineers on the exact tools and workflows your projects demand.</p>
-      </div>
-      <div class="audience-card">
-        <h3>Professionals</h3>
-        <p>Hands-on bootcamps with real hardware and a certificate of completion.</p>
-      </div>
+    <h2>Workshops we offer</h2>
+    <div class="ab-cards">
+      <article class="ab-card tr-card"><h3>Embedded Systems &amp; Firmware</h3><p>Microcontroller programming, RTOS, drivers and real-time design on STM32 and ESP32.</p><div class="tr-meta"><span>Beginner to advanced</span><span>2&ndash;5 days</span></div></article>
+      <article class="ab-card tr-card"><h3>Robotics with ROS / ROS2</h3><p>Nodes, navigation, SLAM and simulation, building autonomous behaviour from the ground up.</p><div class="tr-meta"><span>Intermediate</span><span>3&ndash;5 days</span></div></article>
+      <article class="ab-card tr-card"><h3>Hardware-in-the-Loop Testing</h3><p>Building HIL benches, MATLAB/Simulink models, and automated test and data acquisition.</p><div class="tr-meta"><span>Advanced</span><span>2&ndash;4 days</span></div></article>
+      <article class="ab-card tr-card"><h3>Model-Based Systems Engineering</h3><p>Requirements, SysML modelling and V&amp;V workflows in Cameo or Enterprise Architect.</p><div class="tr-meta"><span>Intermediate</span><span>2&ndash;3 days</span></div></article>
+      <article class="ab-card tr-card"><h3>AI &amp; Computer Vision at the Edge</h3><p>PyTorch, OpenCV and deploying models on NVIDIA Jetson Orin for real-time inference.</p><div class="tr-meta"><span>Intermediate to advanced</span><span>3&ndash;5 days</span></div></article>
+      <article class="ab-card tr-card"><h3>Industrial Automation &amp; PLC</h3><p>PLC programming, SCADA/HMI and control fundamentals on Siemens and Allen-Bradley platforms.</p><div class="tr-meta"><span>Beginner to intermediate</span><span>3&ndash;5 days</span></div></article>
     </div>
   </div>
 </section>
 
-<section class="cta-banner">
+<section class="ab-cards-section cr-section">
   <div class="container">
-    <h2>Bring a workshop to your team or campus</h2>
-    <a href="/contact?about=training" class="btn-primary">Enquire About Training</a>
+    <h2>Who it's for</h2>
+    <div class="ab-cards">
+      <article class="ab-card"><h3>Universities &amp; students</h3><p>Skill-building workshops, final-year project mentoring, and lab and curriculum support.</p></article>
+      <article class="ab-card ab-card-accent"><h3>Companies &amp; teams</h3><p>Upskill your engineers on the exact tools and workflows your projects demand.</p></article>
+      <article class="ab-card"><h3>Professionals</h3><p>Hands-on bootcamps with real hardware and a certificate of completion.</p></article>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block closing %}
+<section class="home-cta ab-closing">
+  <div class="container">
+    <h2>Bring a workshop to your team or campus.</h2>
+    <p>Tell us who the training is for and what they need to learn.</p>
+    <div class="home-cta-buttons">
+      <a href="/contact?about=training" class="btn-primary">Enquire About Training</a>
+      <a href="/careers" class="btn-secondary">See Internships</a>
+    </div>
   </div>
 </section>
 {% endblock %}
