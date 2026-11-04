@@ -423,3 +423,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("hashchange", openFromHash);
   openFromHash();
 });
+
+// Contact form: preselect the topic when a product or training page links here.
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.querySelector("[data-topic-select]");
+  if (!select) return;
+  const topics = { orvex: "Orvex pilot", recura: "ReCura demo", cubbo: "Cubbo", training: "Training" };
+  const topic = topics[new URLSearchParams(window.location.search).get("about")];
+  if (topic) select.value = topic;
+});

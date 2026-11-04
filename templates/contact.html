@@ -3,45 +3,74 @@
 {% block title %}Contact | Fusion Tech Dynamics{% endblock %}
 
 {% block content %}
-<section class="page-hero contact-hero">
-  <div class="hero-overlay">
-    <h1>Contact Us</h1>
-    <p>We’d love to hear from you and discuss your project needs</p>
+<section class="pv-hero ct-hero" style="--pv-img:url('{{ url_for('static', filename='images/hero/contact-hero.webp') }}')">
+  <div class="container">
+    <span class="pv-status">Contact us</span>
+    <h1>Tell us what you're building.</h1>
+    <p class="pv-intro">Send us your idea, requirements or the problem you're trying to solve, and talk it through directly with our engineers.</p>
   </div>
+  <span class="hs-note">Illustrative image.</span>
 </section>
+{% endblock %}
 
-<section class="contact-section">
-  <div class="container contact-container">
-    <div class="contact-info">
-      <h3>Reach Us</h3>
-      <p><strong>Location:</strong> Islamabad, Pakistan</p>
-      <p><strong>Phone:</strong> <a href="tel:+923475370806">+92 347 5370806</a></p>
-      <p><strong>Email:</strong> <a href="mailto:contact@fusiontechdynamics.com">contact@fusiontechdynamics.com</a></p>
+{% block closing %}
+<section class="home-cta ct-main">
+  <div class="container ct-grid">
+    <div class="ct-details">
+      <h2>Reach us directly</h2>
+      <ul class="ct-list">
+        <li><i class="fas fa-envelope" aria-hidden="true"></i><span>Email</span><a href="mailto:contact@fusiontechdynamics.com">contact@fusiontechdynamics.com</a></li>
+        <li><i class="fas fa-phone" aria-hidden="true"></i><span>Phone</span><a href="tel:+923475370806">+92 347 5370806</a></li>
+        <li><i class="fas fa-location-dot" aria-hidden="true"></i><span>Location</span><strong>Islamabad, Pakistan</strong></li>
+      </ul>
+      <h3>What happens next</h3>
+      <ol class="ct-steps">
+        <li><span>1</span>We read your message and ask anything we need to know.</li>
+        <li><span>2</span>Our engineers go through the use case, constraints and risks with you.</li>
+        <li><span>3</span>We agree the scope, milestones and how the result will be tested.</li>
+      </ol>
     </div>
 
-    <div class="contact-form">
+    <div class="ct-card">
+      <h2>Send us a message</h2>
       <form
+        class="ct-form"
         action="https://formsubmit.co/ajax/contact@fusiontechdynamics.com"
         method="post"
         data-secure-form
-        data-success-message="Thank you — your message has been sent. We’ll get back to you shortly.">
+        data-success-message="Thank you. Your message has been sent, and we'll get back to you shortly.">
         <input type="hidden" name="_subject" value="New project enquiry from the Fusion Tech Dynamics website">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
         <input class="form-honeypot" type="text" name="_honey" tabindex="-1" autocomplete="off" hidden>
 
-        <label for="contact-name">Name</label>
-        <input id="contact-name" type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+        <div class="ct-row">
+          <div>
+            <label for="contact-name">Name</label>
+            <input id="contact-name" type="text" name="name" placeholder="Your name" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="contact-email">Email</label>
+            <input id="contact-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          </div>
+        </div>
 
-        <label for="contact-email">Email</label>
-        <input id="contact-email" type="email" name="email" placeholder="Your Email" autocomplete="email" required />
+        <label for="contact-topic">What is this about?</label>
+        <select id="contact-topic" name="topic" data-topic-select>
+          <option value="Engineering project">An engineering project</option>
+          <option value="Orvex pilot">Orvex pilot</option>
+          <option value="ReCura demo">ReCura demo</option>
+          <option value="Cubbo">Cubbo</option>
+          <option value="Training">Training</option>
+          <option value="Something else">Something else</option>
+        </select>
 
-        <label for="contact-message">Project details</label>
-        <textarea id="contact-message" name="message" placeholder="Tell us briefly about your project" rows="6" required></textarea>
+        <label for="contact-message">Your message</label>
+        <textarea id="contact-message" name="message" placeholder="Tell us briefly what you need" rows="5" required></textarea>
 
         <button type="submit" class="btn-primary" data-submit-label="Send Message">Send Message</button>
         <p class="form-status" data-form-status role="status" aria-live="polite"></p>
-        <p class="static-form-note">Your details are used only to respond to your enquiry.</p>
+        <p class="ct-note">Your details are used only to respond to your enquiry.</p>
       </form>
     </div>
   </div>
