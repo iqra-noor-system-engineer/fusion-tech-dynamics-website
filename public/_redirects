@@ -1,3 +1,16 @@
-/home / 301
-/projects /products 301
-/solutions /products 301
+# Old URLs from the previous site
+/home                /            301
+/projects            /#products   301
+/solutions           /#products   301
+/products            /#products   301
+/products/         /#products   301
+/products/orvex      /orvex       301
+/products/orvex/     /orvex       301
+/products/recura     /recura      301
+/products/recura/    /recura      301
+/products/cubbo      /cubbo       301
+/products/cubbo/     /cubbo       301
+/capabilities        /services    301
+/capabilities/       /services    301
+/contact             /#contact    301
+/contact/            /#contact    301
